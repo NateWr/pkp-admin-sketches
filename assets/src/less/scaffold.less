@@ -1,0 +1,78 @@
+//
+// Layout scaffolding
+//
+
+html,
+body {
+	height: 100%;
+}
+
+#wrapper {
+	height: auto;
+	min-height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+#nav {
+	background: @primary;
+	color: #fff;
+	width: 200px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+
+	a {
+		color: #fff;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0 @base;
+	}
+}
+
+#content {
+	height: 100%;
+	padding: @base;
+	margin-left: 200px;
+
+	h1 {
+		margin-top: 0;
+	}
+}
+
+#panel {
+	padding: @base;
+	background: @primary;
+	color: #fff;
+	width: 500px - @double;
+	height: 100%;
+	position: fixed;
+	right: 0;
+	top: 0;
+	overflow-y: scroll;
+	-webkit-transition-property: -webkit-transform;
+	-moz-transition-property: -moz-transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	.transform( translate3d( 100%, 0, 0 ) );
+
+	a {
+		color: #fff;
+	}
+
+}
+
+// Open/close side panel
+.panel-is-visible {
+	overflow-y: hidden;
+
+	#panel {
+		.transform( translate3d( 0, 0, 0 ) );
+	}
+}

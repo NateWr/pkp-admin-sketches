@@ -1,0 +1,14 @@
+{
+  "name": "pkp-admin-sketches",
+  "description": "Sketches of possible admin layout architectures for PKP's product suite.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Nate Wright",
+    "url": "http://github.com/NateWr"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-less": "~0.9.0",
+    "grunt-contrib-watch": "~0.4.3"
+  }
+}
