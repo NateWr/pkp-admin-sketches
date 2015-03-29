@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
+	<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" id="base-css"  href="assets/css/base.css" type="text/css" media="all" />
 
 </head>
@@ -15,15 +16,49 @@
 	<div id="wrapper">
 
 		<div id="nav">
+			<a href="#" class="logo">
+				<img src="assets/img/ojs_logo.png">
+			</a>
 			<ul class="menu">
+				<li>
+					<a href="#">
+						Tasks
+						<span class="task-count">2</span>
+					</a>
+				</li>
 				<li>
 					<a href="#">Dashboard</a>
 				</li>
 				<li>
 					<a href="#">Settings</a>
+					<ul class="submenu">
+						<li>
+							<a href="#">Journal Settings</a>
+						</li>
+						<li>
+							<a href="#">Test Settings</a>
+						</li>
+						<li>
+							<a href="#">Test Settings</a>
+						</li>
+					</ul>
 				</li>
 				<li>
 					<a href="#">Tools</a>
+				</li>
+			</ul>
+			<ul class="controls">
+				<li>
+					<a href="#">
+						<span class="octicon octicon-browser"></span>
+						View Site
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="octicon octicon-sign-out"></span>
+						Logout
+					</a>
 				</li>
 			</ul>
 		</div>
@@ -36,15 +71,48 @@
 				<a href="#" class="toggle-panel">Toggle Help Panel</a>
 			</p>
 
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse placerat velit dolor, ut aliquam nulla scelerisque non. Sed scelerisque risus vitae augue lacinia ultrices. Etiam a dui tellus. Sed efficitur quis mauris ut eleifend. Vestibulum blandit ligula eget odio scelerisque, eu hendrerit neque convallis. Donec ornare libero non risus eleifend, vel varius leo rhoncus. Suspendisse rutrum nulla ut odio ultricies, id pellentesque diam euismod. Curabitur ac porta diam. Integer pellentesque porttitor nunc, non tincidunt risus maximus gravida.</p><p>Nam tincidunt odio nisl, sit amet efficitur massa euismod ac. Fusce ex ipsum, scelerisque at pharetra sit amet, finibus a nisl. Nulla quam nisl, blandit ut nunc nec, euismod dictum ex. Quisque in augue mattis, tristique orci id, lobortis dui. Fusce nec ultricies turpis. Duis viverra vitae tortor et egestas. Sed scelerisque lacinia sodales. Morbi auctor quam diam, id malesuada augue finibus ut.</p><p>Morbi sed sodales nulla. Quisque blandit venenatis ipsum id mollis. Suspendisse sit amet facilisis risus, at porta lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc vitae dui quis sem elementum sollicitudin porta sit amet velit. Nam scelerisque auctor risus eget dignissim. Integer tristique lorem eget urna imperdiet venenatis. Vestibulum libero leo, auctor quis neque non, interdum eleifend arcu. Vestibulum fringilla libero sit amet leo congue ornare. Etiam non erat tincidunt, aliquam sapien id, porttitor nibh. Vestibulum rutrum vulputate purus ac laoreet. Morbi sit amet sodales ligula, ac tincidunt sapien. Sed ornare ac purus nec facilisis. Nullam quis massa a nunc vehicula sodales ut vel lectus.</p><p>Integer fermentum tempus tincidunt. Cras mattis ligula eu dolor convallis, eget lobortis urna efficitur. Morbi vel turpis in risus pellentesque porta. Quisque neque diam, egestas sit amet purus vel, laoreet tincidunt libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec eleifend hendrerit ligula vitae faucibus. Aenean enim quam, lobortis vitae blandit eu, ultricies a sapien. Aliquam quis risus in erat imperdiet porttitor. Proin lobortis, quam eu tristique vestibulum, massa risus facilisis leo, eget pharetra ligula orci luctus lectus.</p><p>Donec vestibulum, augue vitae aliquet scelerisque, neque nibh ullamcorper elit, eu efficitur justo dolor quis enim. Ut non maximus ipsum. Aliquam dictum, arcu in bibendum elementum, est tortor vulputate mi, a placerat sapien felis vitae massa. Nullam et nisl nec risus vulputate volutpat non vitae massa. Mauris facilisis a sem id viverra. Ut varius enim urna, quis accumsan sem tristique scelerisque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum a elit aliquam, blandit mi quis, condimentum massa. Donec malesuada ipsum orci, vitae cursus ligula tristique sit amet. Nulla at volutpat justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a sapien eu lorem rutrum luctus vel ac sem. Proin vel semper nibh. Quisque at nisl ex. Aliquam sagittis porta condimentum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse placerat velit dolor, ut aliquam nulla scelerisque non. Sed scelerisque risus vitae augue lacinia ultrices. Etiam a dui tellus. Sed efficitur quis mauris ut eleifend. Vestibulum blandit ligula eget odio scelerisque, eu hendrerit neque convallis. Donec ornare libero non risus eleifend, vel varius leo rhoncus. Suspendisse rutrum nulla ut odio ultricies, id pellentesque diam euismod. Curabitur ac porta diam. Integer pellentesque porttitor nunc, non tincidunt risus maximus gravida.</p>
+
+			<p>
+				<a href="#" class="toggle-panel" data-target="panel-sub-two">Deep-link to Help Panel Sub-Section</a>
+			</p>
+
+			<p>Nam tincidunt odio nisl, sit amet efficitur massa euismod ac. Fusce ex ipsum, scelerisque at pharetra sit amet, finibus a nisl. Nulla quam nisl, blandit ut nunc nec, euismod dictum ex. Quisque in augue mattis, tristique orci id, lobortis dui. Fusce nec ultricies turpis. Duis viverra vitae tortor et egestas. Sed scelerisque lacinia sodales. Morbi auctor quam diam, id malesuada augue finibus ut.</p><p>Morbi sed sodales nulla. Quisque blandit venenatis ipsum id mollis. Suspendisse sit amet facilisis risus, at porta lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc vitae dui quis sem elementum sollicitudin porta sit amet velit. Nam scelerisque auctor risus eget dignissim. Integer tristique lorem eget urna imperdiet venenatis. Vestibulum libero leo, auctor quis neque non, interdum eleifend arcu. Vestibulum fringilla libero sit amet leo congue ornare. Etiam non erat tincidunt, aliquam sapien id, porttitor nibh. Vestibulum rutrum vulputate purus ac laoreet. Morbi sit amet sodales ligula, ac tincidunt sapien. Sed ornare ac purus nec facilisis. Nullam quis massa a nunc vehicula sodales ut vel lectus.</p><p>Integer fermentum tempus tincidunt. Cras mattis ligula eu dolor convallis, eget lobortis urna efficitur. Morbi vel turpis in risus pellentesque porta. Quisque neque diam, egestas sit amet purus vel, laoreet tincidunt libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec eleifend hendrerit ligula vitae faucibus. Aenean enim quam, lobortis vitae blandit eu, ultricies a sapien. Aliquam quis risus in erat imperdiet porttitor. Proin lobortis, quam eu tristique vestibulum, massa risus facilisis leo, eget pharetra ligula orci luctus lectus.</p><p>Donec vestibulum, augue vitae aliquet scelerisque, neque nibh ullamcorper elit, eu efficitur justo dolor quis enim. Ut non maximus ipsum. Aliquam dictum, arcu in bibendum elementum, est tortor vulputate mi, a placerat sapien felis vitae massa. Nullam et nisl nec risus vulputate volutpat non vitae massa. Mauris facilisis a sem id viverra. Ut varius enim urna, quis accumsan sem tristique scelerisque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum a elit aliquam, blandit mi quis, condimentum massa. Donec malesuada ipsum orci, vitae cursus ligula tristique sit amet. Nulla at volutpat justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a sapien eu lorem rutrum luctus vel ac sem. Proin vel semper nibh. Quisque at nisl ex. Aliquam sagittis porta condimentum.</p>
 
 		</div>
 
+		<div id="screen"></div>
+
 		<div id="panel">
 
-			<h3>Panel Title</h3>
+			<a href="#" class="close toggle-panel">Close</a>
 
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse placerat velit dolor, ut aliquam nulla scelerisque non. Sed scelerisque risus vitae augue lacinia ultrices. Etiam a dui tellus. Sed efficitur quis mauris ut eleifend. Vestibulum blandit ligula eget odio scelerisque, eu hendrerit neque convallis. Donec ornare libero non risus eleifend, vel varius leo rhoncus. Suspendisse rutrum nulla ut odio ultricies, id pellentesque diam euismod. Curabitur ac porta diam. Integer pellentesque porttitor nunc, non tincidunt risus maximus gravida.</p><p>Nam tincidunt odio nisl, sit amet efficitur massa euismod ac. Fusce ex ipsum, scelerisque at pharetra sit amet, finibus a nisl. Nulla quam nisl, blandit ut nunc nec, euismod dictum ex. Quisque in augue mattis, tristique orci id, lobortis dui. Fusce nec ultricies turpis. Duis viverra vitae tortor et egestas. Sed scelerisque lacinia sodales. Morbi auctor quam diam, id malesuada augue finibus ut.</p><p>Morbi sed sodales nulla. Quisque blandit venenatis ipsum id mollis. Suspendisse sit amet facilisis risus, at porta lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc vitae dui quis sem elementum sollicitudin porta sit amet velit. Nam scelerisque auctor risus eget dignissim. Integer tristique lorem eget urna imperdiet venenatis. Vestibulum libero leo, auctor quis neque non, interdum eleifend arcu. Vestibulum fringilla libero sit amet leo congue ornare. Etiam non erat tincidunt, aliquam sapien id, porttitor nibh. Vestibulum rutrum vulputate purus ac laoreet. Morbi sit amet sodales ligula, ac tincidunt sapien. Sed ornare ac purus nec facilisis. Nullam quis massa a nunc vehicula sodales ut vel lectus.</p><p>Integer fermentum tempus tincidunt. Cras mattis ligula eu dolor convallis, eget lobortis urna efficitur. Morbi vel turpis in risus pellentesque porta. Quisque neque diam, egestas sit amet purus vel, laoreet tincidunt libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec eleifend hendrerit ligula vitae faucibus. Aenean enim quam, lobortis vitae blandit eu, ultricies a sapien. Aliquam quis risus in erat imperdiet porttitor. Proin lobortis, quam eu tristique vestibulum, massa risus facilisis leo, eget pharetra ligula orci luctus lectus.</p><p>Donec vestibulum, augue vitae aliquet scelerisque, neque nibh ullamcorper elit, eu efficitur justo dolor quis enim. Ut non maximus ipsum. Aliquam dictum, arcu in bibendum elementum, est tortor vulputate mi, a placerat sapien felis vitae massa. Nullam et nisl nec risus vulputate volutpat non vitae massa. Mauris facilisis a sem id viverra. Ut varius enim urna, quis accumsan sem tristique scelerisque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum a elit aliquam, blandit mi quis, condimentum massa. Donec malesuada ipsum orci, vitae cursus ligula tristique sit amet. Nulla at volutpat justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a sapien eu lorem rutrum luctus vel ac sem. Proin vel semper nibh. Quisque at nisl ex. Aliquam sagittis porta condimentum.</p>
+			<div class="section current" id="panel-main">
+				<div class="head">
+					<h3>Panel Title</h3>
+				</div>
+				<div class="body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse placerat velit dolor, ut aliquam nulla scelerisque non. Sed scelerisque risus vitae augue lacinia ultrices. Etiam a dui tellus. Sed efficitur quis mauris ut eleifend. Vestibulum blandit ligula eget odio scelerisque, eu hendrerit neque convallis. Donec ornare libero non risus eleifend, vel varius leo rhoncus. Suspendisse rutrum nulla ut odio ultricies, id pellentesque diam euismod. Curabitur ac porta diam. Integer pellentesque porttitor nunc, non tincidunt risus maximus gravida.</p><p>Nam tincidunt odio nisl, sit amet efficitur massa euismod ac. Fusce ex ipsum, scelerisque at pharetra sit amet, finibus a nisl. Nulla quam nisl, blandit ut nunc nec, euismod dictum ex. Quisque in augue mattis, tristique orci id, lobortis dui. Fusce nec ultricies turpis. Duis viverra vitae tortor et egestas. Sed scelerisque lacinia sodales. Morbi auctor quam diam, id malesuada augue finibus ut.</p>
+				</div>
+			</div>
+
+			<div class="section" id="panel-sub-one">
+				<div class="head">
+					<h3>Panel Sub One</h3>
+				</div>
+				<div class="body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse placerat velit dolor, ut aliquam nulla scelerisque non. Sed scelerisque risus vitae augue lacinia ultrices. Etiam a dui tellus. Sed efficitur quis mauris ut eleifend. Vestibulum blandit ligula eget odio scelerisque, eu hendrerit neque convallis. Donec ornare libero non risus eleifend, vel varius leo rhoncus. Suspendisse rutrum nulla ut odio ultricies, id pellentesque diam euismod. Curabitur ac porta diam. Integer pellentesque porttitor nunc, non tincidunt risus maximus gravida.</p>
+				</div>
+			</div>
+
+			<div class="section" id="panel-sub-two">
+				<div class="head">
+					<h3>Panel Sub Two</h3>
+				</div>
+				<div class="body">
+					<p>Nam tincidunt odio nisl, sit amet efficitur massa euismod ac. Fusce ex ipsum, scelerisque at pharetra sit amet, finibus a nisl. Nulla quam nisl, blandit ut nunc nec, euismod dictum ex. Quisque in augue mattis, tristique orci id, lobortis dui. Fusce nec ultricies turpis. Duis viverra vitae tortor et egestas. Sed scelerisque lacinia sodales. Morbi auctor quam diam, id malesuada augue finibus ut.</p>
+				</div>
+			</div>
 
 		</div>
 

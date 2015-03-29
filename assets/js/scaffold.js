@@ -4,6 +4,7 @@ $(document).ready(function ($) {
 
 	var body = $( 'body' );
 	var panel = $( '#panel' );
+	var screen = $( '#screen' );
 
 	// Toggle side panel
 	$( '.toggle-panel' ).click( function(e) {
@@ -11,11 +12,53 @@ $(document).ready(function ($) {
 		e.stopPropagation();
 		e.preventDefault();
 
-		if ( body.hasClass( 'panel-is-visible' ) ) {
-			body.removeClass( 'panel-is-visible' );
+		var target = $( e.target );
+
+		if ( target.data( 'target' ) ) {
+			toggle_side_panel( target.data( 'target' ) );
 		} else {
-			body.addClass( 'panel-is-visible' );
+			toggle_side_panel();
 		}
 	});
+
+	// Close side panel when #screen is clicked
+	screen.click( function(e) {
+
+		e.stopPropagation();
+		e.preventDefault();
+
+		toggle_side_panel();
+	});
+
+	// Close side panel on escape
+	$( document ).keyup( function(e) {
+		if ( e.which == '27' && body.hasClass( 'panel-is-visible' ) ) {
+			toggle_side_panel();
+		}
+	})
+
+	function toggle_side_panel( subpanel ) {
+
+		if ( body.hasClass( 'panel-is-visible' ) ) {
+			body.removeClass( 'panel-is-visible' );
+			panel.find( '.section' ).removeClass( 'current' ).first().addClass( 'current' );
+		} else {
+			body.addClass( 'panel-is-visible' );
+
+			if ( subpanel ) {
+				panel.find( '.section' ).removeClass( 'current' ).filter( '#' + subpanel ).addClass( 'current' );
+			}
+		}
+	}
+
+	// Open side panel section
+	panel.find( '.head' ).click( function(e) {
+
+		var target = $( e.target );
+
+		panel.find( '.section' ).removeClass( 'current' );
+		target.parents( '.section' ).addClass( 'current' );
+
+	})
 
 });
