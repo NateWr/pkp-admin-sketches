@@ -9,6 +9,7 @@ body {
 	font-family: @font;
 	font-size: @font-base;
 	line-height: @line-base;
+	&:extend( .text-color );
 }
 
 a {
@@ -91,6 +92,10 @@ a {
 		}
 	}
 
+	.tasks {
+		background: @offset;
+	}
+
 	.task-count {
 		display: inline-block;
 		width: @line-base;
@@ -102,10 +107,6 @@ a {
 		vertical-align: middle;
 		text-align: center;
 		margin-left: 0.25em;
-		position: absolute;
-		right: -@line-base / 2;
-		top: @line-base / 2;
-		box-shadow: 0 0 3px #aaa;
 	}
 
 	.menu {
@@ -126,6 +127,7 @@ a {
 
 		.octicon {
 			margin-right: 0.5em;
+			color: @primary-light;
 		}
 
 		li:hover {
@@ -135,6 +137,10 @@ a {
 				padding: 4px @base 4px @half;
 				color: #fff;
 				border-color: @primary-light;
+			}
+
+			.octicon {
+				color: #fff;
 			}
 		}
 	}
