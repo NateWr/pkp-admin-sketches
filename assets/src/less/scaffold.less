@@ -15,6 +15,12 @@ body {
 a {
 	color: @primary-light;
 	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		color: lighten( @primary-light, 15% );
+		text-decoration: underline;
+	}
 }
 
 #wrapper {
@@ -34,6 +40,7 @@ a {
 	top: 0;
 	bottom: 0;
 	left: 0;
+	z-index: 3;
 
 	.logo {
 		padding: 0;
@@ -63,6 +70,11 @@ a {
 		padding: @half @base;
 		line-height: @double;
 		display: block;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
 	}
 
 	li:hover > a {
@@ -122,7 +134,7 @@ a {
 		a {
 			&:extend( .text-color-light );
 			padding: 4px @base;
-			border-bottom: 1px solid @border;
+			border-bottom: 1px solid @bg;
 		}
 
 		.octicon {
@@ -147,9 +159,17 @@ a {
 }
 
 #content {
+	position: relative;
 	height: 100%;
 	padding: @double;
 	margin-left: 192px;
+	margin-right: @double;
+
+	@media( min-width: @screen-lg ) {
+		margin-right: 192px;
+	}
+
+
 
 	h1 {
 		margin-top: 0;
@@ -167,6 +187,7 @@ a {
 	cursor: pointer;
 	visibility: hidden;
 	opacity: 0;
+	z-index: 6;
 	-webkit-transition: opacity 0.3s 0, visibility 0 0.3s;
 	-moz-transition: opacity 0.3s 0, visibility 0 0.3s;
 	transition: opacity 0.3s 0, visibility 0 0.3s;
@@ -180,6 +201,7 @@ a {
 	position: fixed;
 	right: 0;
 	top: 0;
+	z-index: 10;
 	overflow-y: scroll;
 	-webkit-transition-property: -webkit-transform;
 	-moz-transition-property: -moz-transform;

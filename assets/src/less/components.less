@@ -1,0 +1,74 @@
+//
+// Common components
+//
+
+.caret:before {
+	content: ' ';
+	width: 0;
+	height: 0;
+	display: inline-block;
+	vertical-align: middle;
+	border: 5px solid transparent;
+	border-top: 5px solid;
+}
+
+.button {
+	position: relative;
+	display: inline-block;
+	padding: 0 @base;
+	font-size: @font-base;
+	line-height: @double;
+	&:extend( .text-color );
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	background-color: #eee;
+	background-image: linear-gradient(#fcfcfc, #eee);
+	border: 1px solid @border;
+	border-radius: @radius;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-appearance: none;
+
+	&:hover,
+	&:focus {
+		background-color: #ccc;
+		background-image: linear-gradient(#fcfcfc, #ccc);
+		text-decoration: none;
+		&:extend( .text-color );
+	}
+}
+
+.button-on {
+	&:extend( .button );
+	background-color: @on;
+	background-image: linear-gradient( lighten( @on, 10% ), @on );
+	color: #fff;
+	border-color: @on;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: #fff;
+		background-color: darken( @on, 5% );
+		background-image: linear-gradient( lighten( @on, 7% ), darken( @on, 5% ) );
+	}
+}
+
+.button-off {
+	&:extend( .button );
+	background-color: @off;
+	background-image: linear-gradient( lighten( @off, 10% ), @off );
+	color: #fff;
+	border-color: @off;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: #fff;
+		background-color: darken( @off, 15% );
+		background-image: linear-gradient( @off, darken( @off, 15% ) );
+	}
+}

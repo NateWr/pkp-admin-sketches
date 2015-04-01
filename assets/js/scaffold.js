@@ -15,9 +15,9 @@ $(document).ready(function ($) {
 		var target = $( e.target );
 
 		if ( target.data( 'target' ) ) {
-			toggle_side_panel( target.data( 'target' ) );
+			toggle_panel( target.data( 'target' ) );
 		} else {
-			toggle_side_panel();
+			toggle_panel();
 		}
 	});
 
@@ -27,17 +27,17 @@ $(document).ready(function ($) {
 		e.stopPropagation();
 		e.preventDefault();
 
-		toggle_side_panel();
+		toggle_panel();
 	});
 
 	// Close side panel on escape
 	$( document ).keyup( function(e) {
 		if ( e.which == '27' && body.hasClass( 'panel-is-visible' ) ) {
-			toggle_side_panel();
+			toggle_panel();
 		}
 	})
 
-	function toggle_side_panel( subpanel ) {
+	function toggle_panel( subpanel ) {
 
 		if ( body.hasClass( 'panel-is-visible' ) ) {
 			body.removeClass( 'panel-is-visible' );

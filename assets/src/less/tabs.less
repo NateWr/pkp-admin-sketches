@@ -1,0 +1,302 @@
+//
+// Tabs panel
+//
+
+.tabs {
+	margin: @double 0 0;
+	padding: 0;
+	list-style: none;
+	border-bottom: 1px solid @border;
+
+	> li {
+		display: inline-block;
+
+		a {
+			display: block;
+			padding: 0 @double;
+			line-height: @double;
+		}
+	}
+
+	.current a {
+		border: 1px solid @border;
+		border-bottom: none;
+		position: relative;
+		top: 1px;
+		background: @bg;
+		&:extend( .text-color );
+		background: #fff;
+	}
+
+	.done a {
+		&:extend( .text-color-light );
+
+		&:before {
+			.octicon;
+			content: '\f03a';
+			margin-right: 0.5em
+		}
+	}
+}
+
+.tab-panel {
+	.clearfix;
+	background: #fff;
+	position: relative;
+	border: 1px solid @border;
+	border-top: none;
+
+	.tab-sidebar {
+		float: right;
+		width: 256px - @double;
+		margin: @double @double @double 0;
+		padding: 0;
+
+		@media( min-width: 1200px ) {
+			width: 256px + @double;
+		}
+	}
+
+	.top-bar {
+		margin: -@double -@double @double 0;
+		line-height: @double;
+		height: @double; // hack to get rid of some mysterious spacing
+		.clearfix;
+		font-size: @font-sml;
+		z-index: 2;
+		position: relative;
+		background: @bg;
+
+		.help {
+			display: inline-block;
+			padding: 0 @base;
+
+			.octicon {
+				color: green;
+			}
+		}
+
+		.rounds {
+			position: relative;
+			display: inline-block;
+			text-align: center;
+			background: @bg;
+			overflow: hidden;
+			float: left;
+
+			> a {
+				display: inline-block;
+				padding: 0 @double;
+
+				.caret {
+					position: relative;
+					top: 2px;
+					margin-left: 0.25em;
+				}
+			}
+
+			ul {
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				top: 32px;
+				right: -9999px;
+				width: 100%;
+				background: @bg;
+
+				> li {
+					list-style: none;
+
+					> a {
+						display: block;
+						line-height: @double;
+						padding: 0 @base;
+
+						&.done {
+							text-decoration: none;
+							&:extend( .text-color-light );
+
+							&:before {
+								.octicon;
+								content: '\f03a';
+								margin-right: 0.5em
+							}
+						}
+
+						&.current {
+							text-decoration: none;
+							&:extend( .text-color );
+							cursor: default;
+						}
+					}
+				}
+			}
+
+			&:hover,
+			&:focus {
+				overflow: visible;
+
+				ul {
+					right: 0;
+				}
+			}
+		}
+	}
+
+	.controls {
+		margin: 0;
+		padding: 0;
+
+		li {
+			list-style: none;
+			padding: 0;
+			margin: @base 0;
+		}
+
+		a {
+			display: block;
+			max-width: 25em;
+			text-align: center;
+		}
+	}
+}
+
+.item-lists {
+	margin-right: 256px;
+	padding: @double;
+	padding-top: @double * 2;
+
+	@media( min-width: 1200px ) {
+		margin-right: 256px + ( @double * 2 );
+	}
+}
+
+.notification {
+	background: @bg;
+	border-left: 4px solid @off;
+	padding: @base;
+	padding-left: @double * 2;
+	position: relative;
+	font-size: @font-sml;
+	margin-bottom: @double;
+
+	.octicon {
+		position: absolute;
+		top: 50%;
+		margin-top: -@base;
+		left: @base;
+		color: @off;
+		font-size: @double;
+	}
+}
+
+.item-list {
+	margin-bottom: @double * 2;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.head {
+		line-height: @double;
+		padding: 0;
+
+		.title {
+			font-weight: @bold;
+			display: inline-block;
+
+			.octicon {
+				margin-left: 0.5em;
+				color: green;
+
+				&:hover,
+				&:focus {
+					color: green;
+					text-decoration: none;
+				}
+			}
+		}
+
+		ul {
+			display: inline-block;
+			float: right;
+			font-weight: @normal;
+			font-size: @font-sml;
+		}
+
+		li {
+			dislay: inline-block;
+		}
+
+		a {
+			padding-left: 0 1em;
+		}
+	}
+
+	ul,
+	li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.items {
+		border: 1px solid @bg;
+		border-bottom: 4px solid @bg;
+
+		> li {
+			line-height: @double;
+			padding: @base;
+//			margin: 0 -@base;
+			position: relative;
+
+			&:hover {
+				background: #eee;
+				cursor: pointer;
+			}
+		}
+
+		.title {
+			margin-right: 128px;
+			padding-right: @base;
+
+			> a {
+				display: block;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+				line-height: @double;
+			}
+
+			.actions {
+				font-size: @font-sml;
+				line-height: @base;
+
+				li {
+					display: inline-block;
+					padding-right: 1em;
+				}
+
+				.octicon {
+					color: @offset;
+				}
+				a {
+					&:extend( .text-color-light );
+				}
+			}
+		}
+
+		.type,
+		.status {
+			position: absolute;
+			top: @base;
+			right: @base;
+			width: 128px;
+			text-align: right;
+			font-size: @font-sml;
+			&:extend( .text-color-light );
+		}
+	}
+
+
+}
