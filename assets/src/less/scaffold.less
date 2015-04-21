@@ -31,9 +31,6 @@ a {
 }
 
 #nav {
-	background: @primary;
-	font-size: @font-sml;
-	color: #fff;
 	width: 192px;
 	height: 100%;
 	position: absolute;
@@ -41,121 +38,6 @@ a {
 	bottom: 0;
 	left: 0;
 	z-index: 3;
-
-	.logo {
-		padding: 0;
-		display: block;
-		width: 192px;
-		height: 128px;
-		background: #fff;
-		text-align: center;
-
-		img {
-			margin: 13px 0 26px;
-		}
-	}
-
-	ul {
-		margin: 0;
-		padding: 0;
-	}
-
-	li {
-		list-style: none;
-		position: relative;
-	}
-
-	a {
-		color: #fff;
-		padding: @half @base;
-		line-height: @double;
-		display: block;
-
-		&:hover,
-		&:focus {
-			text-decoration: none;
-		}
-	}
-
-	li:hover > a {
-		border-left: @half solid @bg;
-		padding: @half @base @half @half;
-	}
-
-	.submenu {
-		display: none;
-		position: absolute;
-		top: 0;
-		left: 100%;
-		background: @primary-light;
-		width: 192px;
-		list-style: none;
-
-		li:hover > a {
-			background: @primary;
-		}
-	}
-
-	> ul > li:hover {
-		background: @primary-light;
-
-		.submenu {
-			display: block;
-		}
-	}
-
-	.tasks {
-		background: @offset;
-	}
-
-	.task-count {
-		display: inline-block;
-		width: @line-base;
-		height: @line-base;
-		line-height: @line-base;
-		border-radius: 50%;
-		background: #fff;
-		color: @primary;
-		vertical-align: middle;
-		text-align: center;
-		margin-left: 0.25em;
-	}
-
-	.menu {
-		margin-bottom: 64px;
-	}
-
-	.controls {
-		position: fixed;
-		bottom: 0;
-		width: 192px;
-		background: #fff;
-
-		a {
-			&:extend( .text-color-light );
-			padding: 4px @base;
-			border-bottom: 1px solid @bg;
-		}
-
-		.octicon {
-			margin-right: 0.5em;
-			color: @primary-light;
-		}
-
-		li:hover {
-			background: @primary-light;
-
-			a {
-				padding: 4px @base 4px @half;
-				color: #fff;
-				border-color: @primary-light;
-			}
-
-			.octicon {
-				color: #fff;
-			}
-		}
-	}
 }
 
 #content {
