@@ -22,17 +22,41 @@ module.exports = function(grunt) {
 			}
 		},
 
+		// Configure JSHint
+		jshint: {
+			jshint: {
+				src: 'assets/src/js/**/*',
+			}
+		},
+
+		// Concatenate scripts
+		concat: {
+			build: {
+				files: {
+					'assets/js/admin.js': [
+						'assets/src/js/nav.js',
+					]
+				}
+			},
+		},
+
 		// Watch for changes on some files and auto-compile them
 		watch: {
 			less: {
 				files: ['assets/src/less/*.less'],
 				tasks: ['less']
+			},
+			js: {
+				files: ['assets/src/js/**/*.js'],
+				tasks: ['jshint', 'concat']
 			}
 		}
 
 	});
 
 	// Load tasks
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
