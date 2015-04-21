@@ -22,12 +22,12 @@
 				<img src="assets/img/ojs_logo.png">
 			</a>
 			<ul class="menu">
-				<li class="tasks">
+				<li class="parent tasks">
 					<a href="#" class="has-tasks">
 						Tasks
 						<span class="task-count">2</span>
 					</a>
-					<div class="tasks">
+					<div class="tasks submenu">
 						<ul class="tasks">
 							<li>
 								<div class="task">
@@ -58,14 +58,38 @@
 						</ul>
 					</div>
 				</li>
-				<li>
+				<li class="parent">
 					<a href="#">Dashboard</a>
 				</li>
-				<li>
-					<a href="#">Settings</a>
+				<li class="parent">
+					<a href="#">
+						Settings
+					</a>
+					<ul class="submenu">
+						<li>
+							<a href="#">Journal</a>
+						</li>
+						<li>
+							<a href="#">Website</a>
+						</li>
+						<li>
+							<a href="#">Workflow</a>
+						</li>
+						<li>
+							<a href="#">Distribution</a>
+						</li>
+						<li>
+							<a href="#">Users & Roles</a>
+						</li>
+						<li>
+							<a href="#">Administration</a>
+						</li>
+					</ul>
 				</li>
-				<li>
-					<a href="#">Tools</a>
+				<li class="parent">
+					<a href="#">
+						Tools
+					</a>
 					<ul class="submenu">
 						<li>
 							<a href="#">Import/Export</a>
@@ -77,7 +101,7 @@
 				</li>
 			</ul>
 			<ul class="controls">
-				<li>
+				<li class="parent">
 					<a href="#">
 						<span class="octicon octicon-eye"></span>
 						Other Sites
@@ -94,13 +118,13 @@
 						</li>
 					</ul>
 				</li>
-				<li>
+				<li class="parent">
 					<a href="#">
 						<span class="octicon octicon-eye"></span>
 						View Site
 					</a>
 				</li>
-				<li>
+				<li class="parent">
 					<a href="#">
 						<span class="octicon octicon-sign-out"></span>
 						Logout
@@ -122,6 +146,7 @@
 	</div>
 
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+	<script type="text/javascript" src="assets/js/admin.js"></script>
 
 </body>
 </html>

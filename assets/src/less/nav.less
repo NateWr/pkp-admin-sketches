@@ -7,13 +7,9 @@
 //
 
 #nav {
-	width: 192px;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 3;
+	background: @primary;
+	font-size: @font-sml;
+	color: #fff;
 
 	.logo {
 		padding: 0;
@@ -50,12 +46,6 @@
 		}
 	}
 
-	li:hover > a,
-	li:focus > a {
-		border-left: @half solid @bg;
-		padding: @half @base @half @half;
-	}
-
 	.submenu {
 		position: absolute;
 		top: 0;
@@ -64,13 +54,17 @@
 		width: 192px;
 		list-style: none;
 
-		li:hover > a {
+		li:hover > a,
+		li > a:focus {
 			background: @primary;
 		}
 	}
 
 	> ul > li:hover > a,
-	> ul > li > a:focus {
+	> ul > li > a:focus,
+	.parent.in-focus > a {
+		border-left: @half solid @bg;
+		padding: @half @base @half @half;
 		background: @primary-light;
 
 		+ .submenu {
@@ -109,6 +103,12 @@
 			&:extend( .text-color-light );
 			padding: 4px @base;
 			border-bottom: 1px solid @bg;
+		}
+
+		> li:hover > a,
+		> li > a:focus,
+		.parent.in-focus > a {
+			padding: 4px @base 4px @half;
 		}
 
 		.octicon {
