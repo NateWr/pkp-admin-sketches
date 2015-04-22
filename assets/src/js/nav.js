@@ -45,8 +45,10 @@ $(document).ready(function ($) {
 			parent.addClass( 'in-focus' );
 		});
 
-		// Re-position submenu offset positions
-		pkp.nav.setSubmenusPosition();
+		// Re-position submenu offset positions and refresh when the window
+		// is resized
+		this.setSubmenusPosition();
+		$( window ).resize( _.throttle( this.setSubmenusPosition, 1000 ) );
 
 	};
 
@@ -66,14 +68,15 @@ $(document).ready(function ($) {
 	 * Re-position submenus so that they don't flow below the
 	 * height of the navbar
 	 *
+	 * This function is throttled so can not refer to `this` internally.
 	 * @since 3.0
 	 */
 	pkp.nav.setSubmenusPosition = function() {
 
 		// Reset max height cache
-		this.cache.el_outer_height = this.cache.el.outerHeight();
+		pkp.nav.cache.el_outer_height = pkp.nav.cache.el.outerHeight();
 
-		this.cache.submenus.each( function() {
+		pkp.nav.cache.submenus.each( function() {
 
 			var offset = $(this).offset();
 			var reach = offset.top + $(this).outerHeight();
