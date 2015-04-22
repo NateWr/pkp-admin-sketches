@@ -58,6 +58,10 @@
 		}
 	}
 
+	ul .tasks a {
+		background: @offset;
+	}
+
 	.submenu {
 		position: absolute;
 		top: 0;
@@ -82,8 +86,11 @@
 		}
 	}
 
-	.tasks {
-		background: @offset;
+	.tasks .task-panel,
+	> ul > .tasks:hover > a,
+	> ul > .tasks > a:focus,
+	.parent.in-focus.tasks > a {
+		background: @offset-dark;
 	}
 
 	.task-count {
