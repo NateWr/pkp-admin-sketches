@@ -24,9 +24,10 @@ module.exports = function(grunt) {
 
 		// Configure JSHint
 		jshint: {
-			jshint: {
-				src: 'assets/src/js/**/*',
-			}
+			all: [
+				'assets/src/js/nav.js',
+				'!assets/src/js/lib/underscore.js',
+			]
 		},
 
 		// Concatenate scripts
@@ -34,6 +35,7 @@ module.exports = function(grunt) {
 			build: {
 				files: {
 					'assets/js/admin.js': [
+						'assets/src/js/lib/underscore.js',
 						'assets/src/js/nav.js',
 					]
 				}
