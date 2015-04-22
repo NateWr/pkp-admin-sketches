@@ -45,7 +45,7 @@ module.exports = function(grunt) {
 		// Watch for changes on some files and auto-compile them
 		watch: {
 			less: {
-				files: ['assets/src/less/*.less'],
+				files: ['assets/src/less/**/*'],
 				tasks: ['less']
 			},
 			js: {
