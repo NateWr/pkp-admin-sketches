@@ -72,3 +72,26 @@
 		background-image: linear-gradient( @off, darken( @off, 15% ) );
 	}
 }
+
+// Screen reader text
+.screen-reader {
+	position: absolute;
+	top: -1000em;
+
+	&:focus {
+		left: @base;
+		top: @base;
+		height: auto;
+		width: auto;
+		display: block;
+		font-size: @font-base;
+		padding: @base;
+		background: #fff;
+		z-index: 1000; // !important
+	}
+
+	a {
+		color: @primary;
+		text-decoration: underline;
+	}
+}
