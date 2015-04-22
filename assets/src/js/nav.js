@@ -7,16 +7,22 @@ var pkp = pkp || {};
 $(document).ready(function ($) {
 
 	pkp.nav = pkp.nav || {};
-	pkp.nav.cache = {};
 
-	// Cache references
-	pkp.nav.cache.el = $( '#nav' );
-	pkp.nav.cache.submenu_links = pkp.nav.cache.el.find( '.submenu a' );
-
+	/**
+	 * Initialize the navigation component
+	 *
+	 * @since 3.0
+	 */
 	pkp.nav.init = function() {
 
+		// Cache references
+		this.cache = pkp.nav.cache || {};
+		this.cache.el = $( '#nav' );
+		this.cache.submenus = this.cache.el.find( '.submenu' );
+		this.cache.submenu_links = this.cache.submenus.find( 'a' );
+
 		// Remove focus class from submenus
-		pkp.nav.cache.submenu_links.blur( function(e) {
+		this.cache.submenu_links.blur( function(e) {
 
 			var parent = pkp.nav.getParent( $( e.target ) );
 
@@ -28,7 +34,7 @@ $(document).ready(function ($) {
 		});
 
 		// Add focus class to submenus
-		pkp.nav.cache.submenu_links.focus( function(e) {
+		this.cache.submenu_links.focus( function(e) {
 
 			var parent = pkp.nav.getParent( $( e.target ) );
 
@@ -38,6 +44,9 @@ $(document).ready(function ($) {
 
 			parent.addClass( 'in-focus' );
 		});
+
+		// Re-position submenu offset positions
+		pkp.nav.setSubmenusPosition();
 
 	};
 
@@ -51,6 +60,30 @@ $(document).ready(function ($) {
 	 */
 	pkp.nav.getParent = function( el ) {
 		return el.parents( '.parent' );
+	};
+
+	/**
+	 * Re-position submenus so that they don't flow below the
+	 * height of the navbar
+	 *
+	 * @since 3.0
+	 */
+	pkp.nav.setSubmenusPosition = function() {
+
+		// Reset max height cache
+		this.cache.el_outer_height = this.cache.el.outerHeight();
+
+		this.cache.submenus.each( function() {
+
+			var offset = $(this).offset();
+			var reach = offset.top + $(this).outerHeight();
+			var max = pkp.nav.cache.el_outer_height;
+
+			if ( max < reach ) {
+				var top = max - reach;
+				$(this).css( 'top', top + 'px' );
+			}
+		});
 	};
 
 	// Initialize the component
