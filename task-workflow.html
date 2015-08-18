@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+    <link rel="stylesheet" id="base-css"  href="assets/css/base.css" type="text/css" media="all" />
+    <link rel="stylesheet" id="task-workflow-css"  href="assets/css/task-workflow.css" type="text/css" media="all" />
+
+	<title>Task-based Workflow &mdash; PKP Admin Sketches</title>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<div id="nav">
+			<a href="#" class="logo">
+				<img src="assets/img/ojs_logo.png">
+			</a>
+			<ul class="menu">
+				<li class="tasks">
+					<a href="#">
+						Tasks
+						<span class="task-count">2</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">Dashboard</a>
+				</li>
+				<li>
+					<a href="#">Settings</a>
+					<ul class="submenu">
+						<li>
+							<a href="#">Journal</a>
+						</li>
+						<li>
+							<a href="#">Website</a>
+						</li>
+						<li>
+							<a href="#">Workflow</a>
+						</li>
+						<li>
+							<a href="#">Distribution</a>
+						</li>
+						<li>
+							<a href="#">Users & Roles</a>
+						</li>
+						<li>
+							<a href="#">Administration</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Tools</a>
+					<ul class="submenu">
+						<li>
+							<a href="#">Import/Export</a>
+						</li>
+						<li>
+							<a href="#">Statistics</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="controls">
+				<li>
+					<a href="#">
+						<span class="fa fa-eye"></span>
+						View Site
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="fa fa-sign-out"></span>
+						Logout
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div id="content">
+
+			<div class="submission">
+
+				<div class="head">
+					<span class="title">
+						Cognitive Overload: An investigation into fitting too much on a single page
+					</span>
+					<span class="author">
+						Wright, Smecher, Stranack, et al
+					</span>
+					<a href="#" class="toggle-side-panel">
+						<span class="fa fa-pencil"></span>
+						Edit
+					</a>
+				</div>
+
+				<div class="stages">
+
+					<ul class="tabs">
+						<li class="current">
+							<a href="#">Tasks</a>
+						</li>
+						<li>
+							<a href="#">Metadata</a>
+						</li>
+						<li>
+							<a href="#">Galleys</a>
+						</li>
+					</ul>
+
+					<div class="tab-panel review current">
+
+						<div class="tab-sidebar">
+
+							<ul class="controls">
+								<li>
+									<a href="#" class="button">
+										Add Task
+									</a>
+								</li>
+								<li>
+									<a href="#" class="button-on">
+										Schedule for Publication
+									</a>
+								</li>
+								<li>
+									<a href="#" class="button-off">
+										Decline Submission
+									</a>
+								</li>
+							</ul>
+
+                            <ul class="tasks">
+                                <li class="active">
+                                    <a href="#">
+                                        <span class="number">8</span> Active Tasks
+                                    </a>
+                                </li>
+                                <li class="archived">
+                                    <a href="#">
+                                        <span class="number">2</span> Archived Tasks
+                                    </a>
+                                </li>
+                                <li class="inactive">
+                                    <a href="#">
+                                        <span class="number">0</span> Inactive Tasks
+                                    </a>
+                                </li>
+                            </ul>
+
+						</div><!-- .tab-sidebar -->
+
+						<div class="task-list">
+                            <div class="head">
+                                <div class="title">
+									<span class="number">8</span>
+                                    Active Tasks
+                                    <a href="#" class="fa fa-info-circle toggle-panel" data-target="panel-main"></a>
+                                </div>
+
+                                <ul class="filters">
+									<li class="current">
+										<a href="#">
+											Assigned to Me
+										</a>
+									</li>
+                                    <li>
+                                        <a href="#">
+                                            All Tasks
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <a href="#" class="search">
+                                    <span class="fa fa-search"></span>
+                                    Search
+                                </a>
+                            </div>
+
+                            <ul class="tasks">
+                                <li class="submission" data-task="approve-submission">
+                                    <span class="title">
+                                        Approve Submission Files
+                                    </span>
+									<span class="files"></span>
+                                    <span class="checklist complete">
+                                        <span class="fa fa-check"></span>
+                                    </span>
+                                    <ul class="participants">
+                                        <li class="section-editor">
+                                            DB
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="review" data-task="peer-review-1">
+                                    <span class="title">
+                                        Conduct Peer Review
+                                    </span>
+                                    <span class="message new"></span>
+                                    <span class="files"></span>
+                                    <span class="checklist incomplete">
+                                        1/4
+                                    </span>
+                                    <ul class="participants">
+                                        <li class="section-editor">
+                                            DB
+                                        </li>
+                                        <li class="reviewer">
+                                            AS
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="review new" data-task="peer-review-2">
+                                    <span class="title">
+                                        Conduct Peer Review
+                                    </span>
+                                    <span class="message"></span>
+                                    <span class="files new"></span>
+                                    <span class="checklist incomplete">
+                                        2/4
+                                    </span>
+                                    <ul class="participants">
+                                        <li class="section-editor">
+                                            DB
+                                        </li>
+                                        <li class="reviewer">
+                                            BR
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="review" data-task="peer-review-3">
+                                    <span class="title">
+                                        Conduct Peer Review
+                                    </span>
+                                    <span class="checklist incomplete">
+                                        0/4
+                                    </span>
+                                    <ul class="participants">
+                                        <li class="section-editor">
+                                            DB
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="editorial" data-task="prepare-draft">
+                                    <span class="title">
+                                        Prepare Draft File for Copyeditor
+                                    </span>
+									<span class="message"></span>
+                                    <span class="checklist incomplete">
+                                        2/5
+                                    </span>
+                                    <ul class="participants">
+                                        <li class="section-editor">
+                                            DB
+                                        </li>
+                                        <li class="copy-editor">
+                                            SD
+                                        </li>
+                                        <li class="translator">
+                                            TC
+                                        </li>
+                                        <li class="proofreader">
+                                            CI
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="editorial" data-task="check-metadata">
+                                    <span class="title">
+                                        Check Article Metadata
+                                    </span>
+									<span class="message"></span>
+									<span class="files"></span>
+                                    <span class="checklist incomplete">
+                                        0/2
+                                    </span>
+                                    <ul class="participants">
+                                        <li class="indexer">
+                                            WS
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="production" data-task="prepare-pdf">
+                                    <span class="title">
+                                        Prepare PDF Galley
+                                    </span>
+                                    <span class="checklist incomplete">
+                                        0/3
+                                    </span>
+                                    <ul class="participants">
+                                        <li class="layout-editor">
+                                            JD
+                                        </li>
+                                        <li class="designer">
+                                            YR
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="production" data-task="schedule-publication">
+                                    <span class="title">
+                                        Schedule for Publication
+                                    </span>
+                                    <span class="checklist incomplete">
+                                        0/1
+                                    </span>
+                                    <ul class="participants">
+                                        <li class="journal-editor">
+                                            AM
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+					</div><!-- .tab-panel.review -->
+
+				</div>
+			</div>
+
+		<div id="screen-side-panel"></div>
+
+		<div id="side-panel">
+			<ul class="menu">
+				<li class="head">
+					<a href="#" class="toggle-side-panel">
+						<span class="fa fa-bars"></span>
+						<span class="label">Details</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="toggle-side-panel">
+						Metadata
+					</a>
+					<ul>
+						<li>
+							<a href="#" class="toggle-side-panel">Publication</a>
+						</li>
+						<li>
+							<a href="#" class="toggle-side-panel">Other</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="toggle-side-panel">
+						Notes
+					</a>
+					<ul>
+						<li class="current">
+							<a href="#" class="toggle-side-panel">History</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="toggle-side-panel">
+						Participants
+					</a>
+				</li>
+			</ul>
+			<div class="body">
+				<h3>History Section Title</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse placerat velit dolor, ut aliquam nulla scelerisque non. Sed scelerisque risus vitae augue lacinia ultrices. Etiam a dui tellus. Sed efficitur quis mauris ut eleifend. Vestibulum blandit ligula eget odio scelerisque, eu hendrerit neque convallis. Donec ornare libero non risus eleifend, vel varius leo rhoncus. Suspendisse rutrum nulla ut odio ultricies, id pellentesque diam euismod. Curabitur ac porta diam. Integer pellentesque porttitor nunc, non tincidunt risus maximus gravida.</p>
+				<p>
+					<a href="#" class="toggle-panel">
+						Help links here too
+					</a>
+				</p>
+			</div>
+		</div>
+
+		<div id="screen"></div>
+
+		<div id="panel">
+
+			<a href="#" class="close toggle-panel">Close</a>
+
+			<div class="section current" id="panel-main">
+				<div class="head">
+					<h3>Panel Title</h3>
+				</div>
+				<div class="body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse placerat velit dolor, ut aliquam nulla scelerisque non. Sed scelerisque risus vitae augue lacinia ultrices. Etiam a dui tellus. Sed efficitur quis mauris ut eleifend. Vestibulum blandit ligula eget odio scelerisque, eu hendrerit neque convallis. Donec ornare libero non risus eleifend, vel varius leo rhoncus. Suspendisse rutrum nulla ut odio ultricies, id pellentesque diam euismod. Curabitur ac porta diam. Integer pellentesque porttitor nunc, non tincidunt risus maximus gravida.</p><p>Nam tincidunt odio nisl, sit amet efficitur massa euismod ac. Fusce ex ipsum, scelerisque at pharetra sit amet, finibus a nisl. Nulla quam nisl, blandit ut nunc nec, euismod dictum ex. Quisque in augue mattis, tristique orci id, lobortis dui. Fusce nec ultricies turpis. Duis viverra vitae tortor et egestas. Sed scelerisque lacinia sodales. Morbi auctor quam diam, id malesuada augue finibus ut.</p>
+				</div>
+			</div>
+
+			<div class="section" id="panel-sub-one">
+				<div class="head">
+					<h3>Panel Sub One</h3>
+				</div>
+				<div class="body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse placerat velit dolor, ut aliquam nulla scelerisque non. Sed scelerisque risus vitae augue lacinia ultrices. Etiam a dui tellus. Sed efficitur quis mauris ut eleifend. Vestibulum blandit ligula eget odio scelerisque, eu hendrerit neque convallis. Donec ornare libero non risus eleifend, vel varius leo rhoncus. Suspendisse rutrum nulla ut odio ultricies, id pellentesque diam euismod. Curabitur ac porta diam. Integer pellentesque porttitor nunc, non tincidunt risus maximus gravida.</p>
+				</div>
+			</div>
+
+			<div class="section" id="panel-sub-two">
+				<div class="head">
+					<h3>Panel Sub Two</h3>
+				</div>
+				<div class="body">
+					<p>Nam tincidunt odio nisl, sit amet efficitur massa euismod ac. Fusce ex ipsum, scelerisque at pharetra sit amet, finibus a nisl. Nulla quam nisl, blandit ut nunc nec, euismod dictum ex. Quisque in augue mattis, tristique orci id, lobortis dui. Fusce nec ultricies turpis. Duis viverra vitae tortor et egestas. Sed scelerisque lacinia sodales. Morbi auctor quam diam, id malesuada augue finibus ut.</p>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div id="peer-review-1" class="pkp_modal">
+		<div class="pkp_modal_panel">
+			<div class="header">
+				Conduct Peer Review
+			</div>
+			<a href="#" class="close"></a>
+			<div class="content">
+				<div class="section description">
+					<p>During the peer review process, the Editor and Reviewer can share files and communicate with each other. To conduct a blind review, take care to only add the Reviewer and appropriate editorial personnel as participants in this task.
+				</div>
+				<div class="section details clearfix">
+					<div class="tasks">
+						<h3>Tasks</h3>
+						<ul>
+							<li>
+								<label>
+									<input type="checkbox">
+									The Editor must add a reviewer as a participant to this task.
+								</label>
+							</li>
+							<li>
+								<label>
+									<input type="checkbox">
+									The Reviewer should inform the Editor if they agree to complete the review before the due date.
+								</label>
+							</li>
+							<li>
+								<label>
+									<input type="checkbox">
+									The Reviewer should upload a file with their completed review.
+								</label>
+							</li>
+							<li>
+								<label>
+									<input type="checkbox">
+									The Reviewer must submit their recommendation.
+								</label>
+							</li>
+						</ul>
+					</div>
+					<ul class="actions">
+						<li>
+							<a href="#" class="button">
+								Add Participant
+							</a>
+						</li>
+						<li>
+							<a href="#" class="button">
+								Attach File
+							</a>
+						</li>
+						<li>
+							<a href="#" class="button">
+								Send Message
+							</a>
+						</li>
+						<li>
+							<a href="#" class="button-on">
+								Submit Recommendation
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="section panels">
+					<ul class="tabs">
+						<li class="participants">
+							Participants
+						</li>
+						<li class="files">
+							Files
+						</li>
+						<li class="messages">
+							Messages
+						</li>
+					</ul>
+				</div>
+				<div class="panel participants">
+					Participants stuff
+				</div>
+				<div class="panel files">
+					Files stuff
+				</div>
+				<div class="panel messages">
+					Messages stuff
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="assets/js/jquery.js"></script>
+	<script type="text/javascript" src="assets/js/scaffold.js"></script>
+	<script type="text/javascript" src="assets/js/side-panel.js"></script>
+	<script type="text/javascript" src="assets/js/task-workflow.js"></script>
+
+</body>
+</html>

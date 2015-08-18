@@ -1,0 +1,464 @@
+/*
+ Temporary CSS file for task workflow, while working in an environment without
+ grunt to compile the less files
+*/
+
+
+/* @temp, can be removed once grunt back in play*/
+.tabs > li > a {
+    line-height: 47px;
+}
+
+.tab-sidebar .controls {
+    margin-top: 112px; /* aligns with top of tasks list */
+}
+
+.tab-sidebar .controls > li:first-child {
+    margin-top: 0;
+}
+
+.tab-sidebar .controls > li:last-child {
+    margin-bottom: 0;
+}
+
+.tab-sidebar .tasks {
+    margin: 32px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tab-sidebar .tasks > li {
+    padding: 8px 0;
+    line-height: 32px;
+}
+
+.tab-sidebar .tasks .number {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    margin-right: 0.5em;
+    border: 1px solid #bbb;
+    border-radius: 50%;
+    line-height: 32px;
+    text-align: center;
+}
+
+.tab-sidebar .tasks .fa {
+    color: #00b24e;
+}
+
+/* Task list container */
+.task-list {
+	margin-right: 256px;
+	padding: 32px;
+}
+
+@media( min-width: 1200px ) {
+    .task-list {
+        margin-right: 320px;
+    }
+}
+
+/* header */
+.task-list .head .title {
+    margin-bottom: 32px;
+    padding: 0;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.task-list .head .title .fa {
+    margin-left: 0.25em;
+    font-weight: normal;
+    color: #00b24e;
+}
+
+.task-list .head .title .fa:hover,
+.task-list .head .title .fa:focus {
+    text-decoration: none;
+}
+
+.task-list .head .title .number {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #222;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 0.5em;
+}
+
+.task-list .head .filters {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
+}
+
+.task-list .head .filters > li {
+    display: inline-block;
+    padding: 0 1em;
+}
+
+.task-list .head .filters > li:first-child {
+    padding-left: 0;
+}
+
+.task-list .head .filters > li:last-child {
+    padding-right: 0;
+}
+
+.task-list .head .filters > li > a {
+    display: block;
+    line-height: 44px;
+    border-bottom: 4px solid transparent;
+}
+
+.task-list .head .filters > .current > a {
+    border-color: #ddd;
+    color: #777;
+}
+
+.task-list .head .filters > li > a:hover,
+.task-list .head .filters > li > a:focus,
+.task-list .head .search:hover,
+.task-list .head .search:focus {
+    border-color: #007AB2;
+    text-decoration: none;
+}
+
+.task-list .head .search {
+    display: inline-block;
+    float: right;
+    margin-left: 1em;
+    border-bottom: 4px solid transparent;
+    font-size: 14px;
+    line-height: 44px;
+    font-weight: 700;
+}
+
+.task-list .head .search .fa-search:before {
+    content: "\f002";
+    margin-right: 0.25em;
+}
+
+/* task list */
+.task-list .tasks {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #ddd;
+    border-bottom: 2px solid #ddd;
+}
+
+.task-list .tasks > li {
+    position: relative;
+    /* 20px: 16px padding + 4px on top/btm of 24px line height = 64px */
+    padding: 20px 16px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.task-list .tasks > li:hover,
+.task-list .tasks > li:focus {
+    background: #eee;
+}
+
+.task-list .tasks > li .checklist {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    padding: 8px;
+    min-width: 48px;
+    font-size: 14px;
+    line-height: 48px;
+    color: #777;
+    text-align: center;
+}
+
+.task-list .tasks > li .checklist.complete .fa {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 8px;
+    background: #00b24e;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    line-height: 32px;
+    vertical-align: middle;
+}
+
+.task-list .tasks > li .title {
+    display: inline-block;
+    margin-left: 46px; /* 46px = split the border along 64 baseline */
+    padding-left: 14px; /* 16 - border */
+    border-left: 4px solid transparent;
+    line-height: 24px;
+}
+
+.task-list .tasks > li.submission .title {
+    border-left-color: #D00A6C;
+}
+
+.task-list .tasks > li.review .title {
+    border-left-color: #E8A11F;
+}
+
+.task-list .tasks > li.editorial .title {
+    border-left-color: #0AD0C8;
+}
+
+.task-list .tasks > li.production .title {
+    border-left-color: #00b24e;
+}
+
+.task-list .tasks .message,
+.task-list .tasks .files {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0,0);
+    color: #777;
+    margin-left: 1em;
+}
+
+
+.task-list .tasks .message:before {
+    content: "\f0e5";
+}
+
+.task-list .tasks .files:before {
+    content: "\f016";
+}
+
+.task-list .tasks .message.new:before {
+    color: #007ab2;
+    content: "\f075";
+}
+.task-list .tasks .files.new:before {
+    color: #007ab2;
+    content: "\f15b";
+}
+
+.task-list .tasks .participants {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    max-width: 128px;
+    padding: 0 16px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.task-list .tasks .participants > li {
+    float: right;
+    display: block;
+    margin: 20px 8px;
+    line-height: 24px;
+    color: #777;
+    font-size: 14px;
+}
+.task-list .tasks .participants > li:first-child {
+    margin-right: 0;
+}
+.task-list .tasks .participants > li:last-child {
+    margin-left: 0;
+}
+
+/* Modals */
+.modal_is_visible {
+	overflow: hidden !important;
+}
+
+.pkp_modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 1000;
+	overflow-y: auto;
+	cursor: pointer;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, visibility 0.3s;
+	-moz-transition: opacity 0.3s, visibility 0.3s;
+	transition: opacity 0.3s, visibility 0.3s;
+}
+
+.pkp_modal.is_visible {
+	visibility: visible;
+	opacity: 1;
+}
+
+.pkp_modal_panel {
+	position: relative;
+	width: 90%;
+	max-width: 50em;
+	background: #fff;
+	margin: 32px auto;
+	cursor: auto;
+	border-radius: 5px;
+	.transform(translateY(-30px));
+	-webkit-transition-property: -webkit-transform;
+	-moz-transition-property: -moz-transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+
+}
+
+.is_visible .pkp_modal_panel {
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
+}
+
+.pkp_modal_panel > .header,
+.pkp_modal_panel > .content {
+	padding: 16px;
+}
+
+.pkp_modal_panel > .header {
+	background: #007AB2;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	font-weight: 700;
+	color: #fff;
+	padding-right: 64px;
+    line-height: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.pkp_modal_panel > .close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 64px;
+	height: 64px; // matches height of .header
+	line-height: 64px;
+	border-top-right-radius: 5px;
+	color: rgba(255,255,255,0.7);
+	color: #ddd;
+	text-align: center;
+}
+
+.pkp_modal_panel > .close:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0,0);
+	content: "\f00d";
+	font-size: 32px;
+	line-height: 64px;
+}
+
+.pkp_modal_panel > .close:hover,
+.pkp_modal_panel > .close:focus {
+	background: #ddd;
+	color: #D00A6C;
+}
+
+.pkp_modal_panel > .footer {
+	padding: @base;
+	background: #ddd;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.pkp_modal .section {
+    padding: 32px 0 31px;
+    border-bottom: 1px solid #ddd;
+}
+
+.pkp_modal .section:first-child {
+    padding-top: 0;
+}
+
+.pkp_modal .section:last-child {
+    padding-bottom: 0;
+    border: none;
+}
+
+.pkp_modal .section p {
+    margin: 32px 0;
+}
+
+.pkp_modal .section p:last-child {
+    margin-bottom: 0;
+}
+
+.pkp_modal .section p:first-child {
+    margin-top: 0;
+}
+
+.pkp_modal .section h3 {
+    margin: 0 0 16px;
+    padding: 4px 0;
+    line-height: 24px;
+}
+
+.pkp_modal .section.details .tasks {
+    float: left;
+    box-sizing: border-box;
+    width: 512px;
+    padding-right: 16px;
+}
+
+.pkp_modal .section.details .tasks > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pkp_modal .section.details .tasks > ul > li {
+    padding: 4px 0;
+}
+
+.pkp_modal .section.details .actions {
+    float: right;
+    box-sizing: border-box;
+    width: 256px;
+    margin: 0;
+    margin-top: 48px;
+    padding-left: 16px;
+    list-style: none;
+}
+
+.pkp_modal .section.details .actions > li {
+    margin-bottom: 16px;
+}
+
+.pkp_modal .section.details .actions > li:last-child {
+    margin-bottom: 0;
+}
+
+.pkp_modal .section.details .actions .button,
+.pkp_modal .section.details .actions .button-on,
+.pkp_modal .section.details .actions .button-off {
+    display: block;
+    text-align: center;
+}
+
+.pkp_modal .section.panels .tabs {
+    margin-top: 0;
+}
