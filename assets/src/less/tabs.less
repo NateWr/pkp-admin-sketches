@@ -12,23 +12,23 @@
 		display: inline-block;
 
 		a {
+			position: relative;
+			top: 3px;
 			display: block;
 			padding: 0 @double;
-			line-height: @double + @base - 2
+			line-height: @double + @base;
 			border-bottom: 2px solid transparent;
 
 			&:hover,
 			&:focus {
 				border-color: @primary-light;
+				text-decoration: none;
 			}
 		}
 	}
 
 	.current a {
 		border: 1px solid @border;
-		border-bottom: none;
-		position: relative;
-		top: 1px;
 		background: @bg;
 		&:extend( .text-color );
 		background: #fff;

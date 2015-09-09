@@ -1,8 +1,12 @@
-/*
- Temporary CSS file for task workflow, while working in an environment without
- grunt to compile the less files
-*/
+// Mockup fot the task workflow proprosal
+// Much of the innitial styles were written in CSS, not LESS, when I was working
+// in an environment without grunt to compile the less files (and couldn't
+// retrieve grunt. I was on a plane).
 
+/* Don't need the side panel for this mockup */
+.task-workflow #content {
+    margin-right: 0;
+}
 
 /* @temp, can be removed once grunt back in play*/
 .tabs > li > a {
@@ -198,30 +202,16 @@
 .task-list .tasks > li .title {
     display: inline-block;
     margin-left: 46px; /* 46px = split the border along 64 baseline */
-    padding-left: 14px; /* 16 - border */
-    border-left: 4px solid transparent;
     line-height: 24px;
-}
-
-.task-list .tasks > li.submission .title {
-    border-left-color: #D00A6C;
-}
-
-.task-list .tasks > li.review .title {
-    border-left-color: #E8A11F;
-}
-
-.task-list .tasks > li.editorial .title {
-    border-left-color: #0AD0C8;
-}
-
-.task-list .tasks > li.production .title {
-    border-left-color: #00b24e;
+	font-weight: 700;
 }
 
 .task-list .tasks .message,
 .task-list .tasks .files {
     display: inline-block;
+	float: right;
+	line-height: 24px;
+	height: 24px;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
@@ -230,6 +220,11 @@
     transform: translate(0,0);
     color: #777;
     margin-left: 1em;
+
+	&:before {
+		display: block;
+		margin-top: 4px;
+	}
 }
 
 
@@ -428,10 +423,41 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    background: #ddd;
 }
 
 .pkp_modal .section.details .tasks > ul > li {
-    padding: 4px 0;
+    display: block;
+    position: relative;
+    padding: 16px 16px 15px 48px;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+
+.pkp_modal .section.details .tasks > ul > li:before {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: block;
+    margin-top: 12px; /* half of 24 */
+    transform: translateY(-50%);
+
+    /* Font awesome icon */
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f096";
+}
+
+.pkp_modal .section.details .tasks > ul > li.complete {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.pkp_modal .section.details .tasks > ul > li.complete:before {
+    content: "\f046";
 }
 
 .pkp_modal .section.details .actions {
