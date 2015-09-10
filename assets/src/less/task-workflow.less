@@ -166,6 +166,13 @@
     padding: 20px 16px;
     border-bottom: 1px solid #ddd;
     cursor: pointer;
+
+    &.complete {
+
+        .title {
+            font-weight: @normal;
+        }
+    }
 }
 
 .task-list .tasks > li:hover,
@@ -652,6 +659,18 @@
         .element {
             padding-left: 32px;
         }
+
+        .new {
+
+            .name {
+                font-weight: @bold;
+            }
+
+            .type .fa:before {
+                color: @primary-light;
+            }
+
+        }
     }
 
     &.messages {
@@ -663,6 +682,19 @@
 
         .replies {
             margin-right: 2em;
+        }
+
+        .new {
+
+            .name {
+                font-weight: @bold;
+            }
+
+            .status .fa:before {
+                content: @fa-var-comment;
+                color: @primary-light;
+            }
+
         }
     }
 

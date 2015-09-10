@@ -179,10 +179,11 @@
                             </div>
 
                             <ul class="tasks">
-                                <li class="submission" data-task="approve-submission">
+                                <li class="submission complete" data-task="approve-submission">
                                     <span class="title">
                                         Approve Submission Files
                                     </span>
+                                    <span class="message"></span>
 									<span class="files"></span>
                                     <span class="checklist complete">
                                         <span class="fa fa-check"></span>
@@ -192,18 +193,18 @@
                                     <span class="title">
                                         Conduct Peer Review
                                     </span>
-                                    <span class="message new"></span>
-                                    <span class="files"></span>
+                                    <span class="message"></span>
+                                    <span class="files new"></span>
                                     <span class="checklist incomplete">
                                         1/4
                                     </span>
                                 </li>
-                                <li class="review new" data-task="peer-review-2">
+                                <li class="review" data-task="peer-review-2">
                                     <span class="title">
                                         Conduct Peer Review
                                     </span>
-                                    <span class="message"></span>
-                                    <span class="files new"></span>
+                                    <span class="message new"></span>
+                                    <span class="files"></span>
                                     <span class="checklist incomplete">
                                         2/4
                                     </span>
@@ -216,23 +217,30 @@
                                         0/4
                                     </span>
                                 </li>
+                                <li class="editorial-decision" data-task="editorial-decision">
+                                    <span class="title">
+                                        Make Editorial Decision
+                                    </span>
+                                    <span class="checklist incomplete">
+                                        0/4
+                                    </span>
+                                </li>
                                 <li class="editorial" data-task="copyedit">
                                     <span class="title">
                                         Copyedit Reviewed Files
                                     </span>
-									<span class="message"></span>
+                                    <span class="message"></span>
+                                    <span class="files"></span>
                                     <span class="checklist incomplete">
-                                        2/5
+                                        2/4
                                     </span>
                                 </li>
                                 <li class="editorial" data-task="check-metadata">
                                     <span class="title">
                                         Check Article Metadata
                                     </span>
-									<span class="message"></span>
-									<span class="files"></span>
                                     <span class="checklist incomplete">
-                                        0/2
+                                        0/1
                                     </span>
                                 </li>
                                 <li class="production" data-task="prepare-pdf">
@@ -286,7 +294,7 @@
 							</li>
 							<li class="complete">
 								<a href="#" class="fa fa-square-o"></a>
-								The Editor should approve or reject the submission using the Approve Submission or Reject Submission buttons.
+								The Editor should approve or decline the submission using the Approve Submission or Decline Submission buttons.
 							</li>
 						</ul>
 					</div>
@@ -319,7 +327,7 @@
 							</li>
 							<li>
 								<a href="#" class="button-off">
-									Reject Submission
+									Decline Submission
 								</a>
 							</li>
 						</ul>
@@ -995,6 +1003,1054 @@
 			</div>
 		</div>
 	</div><!-- #peer-review-1 -->
+
+	<div id="peer-review-2" class="pkp_modal">
+		<div class="pkp_modal_panel">
+			<div class="header">
+				Conduct Peer Review
+			</div>
+			<a href="#" class="close"></a>
+			<div class="content">
+				<div class="section details clearfix">
+					<div class="tasks">
+						<h3>Checklist</h3>
+						<ul>
+							<li class="complete">
+								<a href="#" class="fa fa-square-o"></a>
+								The Editor must add a reviewer to the Participants panel below.
+							</li>
+							<li class="complete">
+								<a href="#" class="fa fa-square-o"></a>
+								The Reviewer should accept or decline the request to review by sending a message from the Messages panel below.
+							</li>
+							<li>
+								<a href="#" class="fa fa-square-o"></a>
+								The Reviewer should upload a file with their completed review.
+							</li>
+							<li>
+								<a href="#" class="fa fa-square-o"></a>
+								The Reviewer must submit their decision using the Submit Decision button.
+							</li>
+						</ul>
+					</div>
+					<div class="actions">
+						<ul>
+							<li>
+								<a href="#" class="button">
+									Add Participant
+								</a>
+							</li>
+							<li>
+								<a href="#" class="button">
+									Attach File
+								</a>
+							</li>
+							<li>
+								<a href="#" class="button">
+									Send Message
+								</a>
+							</li>
+							<li>
+								<a href="#" class="button-on">
+									Submit Decision
+								</a>
+							</li>
+							<li>
+								<a href="#" class="button-on">
+									Rate Reviewer
+								</a>
+							</li>
+							<li>
+								<a href="#" class="button-off">
+									Mark Task Incomplete
+								</a>
+							</li>
+						</ul>
+						<div class="due">
+							<span class="title">
+								<span class="fa fa-clock-o"></span>
+								Due
+							</span>
+							<span class="value">
+								November 21, 2015
+								<span class="fa fa-pencil"></span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="section panels">
+					<ul class="tabs">
+						<li class="participants">
+							<a href="#" data-target="participants">
+								Participants
+							</a>
+						</li>
+						<li class="files">
+							<a href="#" data-target="files">
+								Files
+							</a>
+						</li>
+						<li class="messages">
+							<a href="#" data-target="messages">
+								Messages
+							</a>
+						</li>
+						<li class="log">
+							<a href="#" data-target="log">
+								Log
+							</a>
+						</li>
+					</ul>
+					<div class="panel participants">
+						<ul class="list">
+							<li>
+								<span class="name">
+									Julie McGill
+								</span>
+								<span class="role">
+									Editor
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="delete">
+											<span class="fa fa-times-circle-o"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<span class="name">
+									Jonathan Acker
+								</span>
+								<span class="role">
+									Reviewer
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="delete">
+											<span class="fa fa-times-circle-o"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="footer">
+								<a href="#" class="add">
+									Add Participant
+								</a>
+							</li>
+						</ul>
+					</div><!-- .participants -->
+					<div class="panel files">
+						<ul class="list">
+							<li>
+								<div class="name">
+									Cognitive Overload Submission - prepared for reviewers
+								</div>
+								<div class="element">
+									Article
+								</div>
+								<span class="type">
+									<span class="fa fa-file-word-o"></span>
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="edit">
+											<span class="fa fa-pencil"></span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="delete">
+											<span class="fa fa-times-circle-o"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div class="name">
+									Journal of Public Knowledge Review Policy
+								</div>
+								<div class="element">
+									Other
+								</div>
+								<span class="type">
+									<span class="fa fa-file-pdf-o"></span>
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="edit">
+											<span class="fa fa-pencil"></span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="delete">
+											<span class="fa fa-times-circle-o"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="footer">
+								<a href="#" class="add">
+									Add File
+								</a>
+							</li>
+						</ul>
+					</div><!-- .files -->
+					<div class="panel messages">
+						<ul class="list">
+							<li class="new">
+								<div class="name">
+									When is the due date again?
+								</div>
+								<div class="details">
+									<span class="replies">
+										1 messages
+									</span>
+									<span class="last-reply">
+										Latest: 9:32am October 2, 2015
+									</span>
+								</div>
+								<span class="status">
+									<span class="fa fa-comment-o"></span>
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="edit">
+											<span class="fa fa-pencil"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div class="name">
+									Invitation to review
+								</div>
+								<div class="details">
+									<span class="replies">
+										2 messages
+									</span>
+									<span class="last-reply">
+										Latest: 11:41am August 2, 2015
+									</span>
+								</div>
+								<span class="status">
+									<span class="fa fa-comment-o"></span>
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="edit">
+											<span class="fa fa-pencil"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="footer">
+								<a href="#" class="add">
+									Send Message
+								</a>
+							</li>
+						</ul>
+					</div><!-- .message -->
+					<div class="panel log">
+						<ul class="list">
+							<li>
+								<div class="log">
+									A task was marked completed: "The Reviewer should accept or decline the request to review by sending a message from the Messages panel below."
+								</div>
+								<div class="details">
+									<span class="person">
+										Julie McGill
+									</span>
+									<span class="time">
+										9:42am September 12, 2015
+									</span>
+								</div>
+							</li>
+								<li>
+									<div class="log">
+										A task was marked completed: "The Editor must add a reviewer to the Participants panel below."
+									</div>
+									<div class="details">
+										<span class="person">
+											Julie McGill
+										</span>
+										<span class="time">
+											9:42am September 12, 2015
+										</span>
+									</div>
+								</li>
+							<li>
+								<div class="log">
+									Jonathan Acker was added as a participant to this task.
+								</div>
+								<div class="details">
+									<span class="person">
+										Julie McGill
+									</span>
+									<span class="time">
+										9:32am September 12, 2015
+									</span>
+								</div>
+							</li>
+							<li class="footer">
+								<a href="#" class="next">
+									Next Page
+								</a>
+							</li>
+						</ul>
+					</div><!-- .log -->
+				</div>
+			</div>
+		</div>
+	</div><!-- #peer-review-2 -->
+
+	<div id="editorial-decision" class="pkp_modal">
+		<div class="pkp_modal_panel">
+			<div class="header">
+				Make Editorial Decision
+			</div>
+			<a href="#" class="close"></a>
+			<div class="content">
+				<div class="section details clearfix">
+					<div class="tasks">
+						<h3>Checklist</h3>
+						<ul>
+							<li>
+								<a href="#" class="fa fa-square-o"></a>
+								The Editor must add the Author as a participant using the Participants panel below.
+							</li>
+							<li>
+								<a href="#" class="fa fa-square-o"></a>
+								The Editor must communicate with the Author if any revisions are required using the Message panel below.
+							</li>
+							<li>
+								<a href="#" class="fa fa-square-o"></a>
+								The Editor must share the reviewers' comments with the Author using the Share Reviews button.
+							</li>
+							<li>
+								<a href="#" class="fa fa-square-o"></a>
+								The Author must respond to any queries from the Editor in the Message panel and upload revised files using the Files panel below, if any revisions are required.
+							</li>
+							<li>
+								<a href="#" class="fa fa-square-o"></a>
+								The Editor must record a final editorial decision using the Record Decision button on the right.
+							</li>
+						</ul>
+					</div>
+					<div class="actions">
+						<ul>
+							<li>
+								<a href="#" class="button">
+									Add Participant
+								</a>
+							</li>
+							<li>
+								<a href="#" class="button">
+									Attach File
+								</a>
+							</li>
+							<li>
+								<a href="#" class="button">
+									Send Message
+								</a>
+							</li>
+							<li>
+								<a href="#" class="button-on">
+									Share Reviews
+								</a>
+							</li>
+							<li>
+								<a href="#" class="button-on">
+									Record Decision
+								</a>
+							</li>
+						</ul>
+						<div class="due">
+							<span class="title">
+								<span class="fa fa-clock-o"></span>
+								Due
+							</span>
+							<span class="value">
+								December 13, 2015
+								<span class="fa fa-pencil"></span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="section panels">
+					<ul class="tabs">
+						<li class="participants">
+							<a href="#" data-target="participants">
+								Participants
+							</a>
+						</li>
+						<li class="files">
+							<a href="#" data-target="files">
+								Files
+							</a>
+						</li>
+						<li class="messages">
+							<a href="#" data-target="messages">
+								Messages
+							</a>
+						</li>
+						<li class="log">
+							<a href="#" data-target="log">
+								Log
+							</a>
+						</li>
+					</ul>
+					<div class="panel participants">
+						<ul class="list">
+							<li>
+								<span class="name">
+									Julie McGill
+								</span>
+								<span class="role">
+									Editor
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="delete">
+											<span class="fa fa-times-circle-o"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<span class="name">
+									Nate Wright
+								</span>
+								<span class="role">
+									Author
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="delete">
+											<span class="fa fa-times-circle-o"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="footer">
+								<a href="#" class="add">
+									Add Participant
+								</a>
+							</li>
+						</ul>
+					</div><!-- .participants -->
+					<div class="panel files">
+						<ul class="list">
+							<li class="footer">
+								<a href="#" class="add">
+									Add File
+								</a>
+							</li>
+						</ul>
+					</div><!-- .files -->
+					<div class="panel messages">
+						<ul class="list">
+							<li class="footer">
+								<a href="#" class="add">
+									Send Message
+								</a>
+							</li>
+						</ul>
+					</div><!-- .message -->
+					<div class="panel log">
+						<ul class="list">
+							<li class="footer">
+								<a href="#" class="next">
+									Next Page
+								</a>
+							</li>
+						</ul>
+					</div><!-- .log -->
+				</div>
+			</div>
+		</div>
+	</div><!-- #editorial-decision-->
+
+	<div id="copyedit" class="pkp_modal">
+		<div class="pkp_modal_panel">
+			<div class="header">
+				Copyedit Reviewed Files
+			</div>
+			<a href="#" class="close"></a>
+			<div class="content">
+				<div class="section details clearfix">
+					<div class="tasks">
+						<h3>Checklist</h3>
+						<ul>
+							<li class="complete">
+								<a href="#" class="fa fa-square-o"></a>
+								The Editor must attach the files that need to be copyedited.
+							</li>
+							<li class="complete">
+								<a href="#" class="fa fa-square-o"></a>
+								The Editor must add the Author and a Copyeditor to the Participants panel below.
+							</li>
+							<li>
+								<a href="#" class="fa fa-square-o"></a>
+								The Copyeditor must upload the files they have copyedited.
+							</li>
+							<li>
+								<a href="#" class="fa fa-square-o"></a>
+								The Editor, Author and Copyeditor must communicate using the Messages panel below to ensure the files are ready for publication.
+							</li>
+						</ul>
+					</div>
+					<div class="actions">
+						<ul>
+							<li>
+								<a href="#" class="button">
+									Add Participant
+								</a>
+							</li>
+							<li>
+								<a href="#" class="button">
+									Attach File
+								</a>
+							</li>
+							<li>
+								<a href="#" class="button">
+									Send Message
+								</a>
+							</li>
+						</ul>
+						<div class="due">
+							<span class="title">
+								<span class="fa fa-clock-o"></span>
+								Due
+							</span>
+							<span class="value">
+								December 13, 2015
+								<span class="fa fa-pencil"></span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="section panels">
+					<ul class="tabs">
+						<li class="participants">
+							<a href="#" data-target="participants">
+								Participants
+							</a>
+						</li>
+						<li class="files">
+							<a href="#" data-target="files">
+								Files
+							</a>
+						</li>
+						<li class="messages">
+							<a href="#" data-target="messages">
+								Messages
+							</a>
+						</li>
+						<li class="log">
+							<a href="#" data-target="log">
+								Log
+							</a>
+						</li>
+					</ul>
+					<div class="panel participants">
+						<ul class="list">
+							<li>
+								<span class="name">
+									Julie McGill
+								</span>
+								<span class="role">
+									Editor
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="delete">
+											<span class="fa fa-times-circle-o"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<span class="name">
+									Brian Jones
+								</span>
+								<span class="role">
+									Copyeditor
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="delete">
+											<span class="fa fa-times-circle-o"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<span class="name">
+									Nate Wright
+								</span>
+								<span class="role">
+									Author
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="delete">
+											<span class="fa fa-times-circle-o"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="footer">
+								<a href="#" class="add">
+									Add Participant
+								</a>
+							</li>
+						</ul>
+					</div><!-- .participants -->
+					<div class="panel files">
+						<ul class="list">
+							<li>
+								<div class="name">
+									Updated list of references
+								</div>
+								<div class="element">
+									Other
+								</div>
+								<span class="type">
+									<span class="fa fa-file-word-o"></span>
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="edit">
+											<span class="fa fa-pencil"></span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="delete">
+											<span class="fa fa-times-circle-o"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div class="name">
+									Final draft ready for copyediting
+								</div>
+								<div class="element">
+									Article
+								</div>
+								<span class="type">
+									<span class="fa fa-file-word-o"></span>
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="edit">
+											<span class="fa fa-pencil"></span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="delete">
+											<span class="fa fa-times-circle-o"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="footer">
+								<a href="#" class="add">
+									Add File
+								</a>
+							</li>
+						</ul>
+					</div><!-- .files -->
+					<div class="panel messages">
+						<ul class="list">
+							<li>
+								<div class="name">
+									A new version of the references needs to go in
+								</div>
+								<div class="details">
+									<span class="replies">
+										1 messages
+									</span>
+									<span class="last-reply">
+										Latest: 9:32am October 2, 2015
+									</span>
+								</div>
+								<span class="status">
+									<span class="fa fa-comment-o"></span>
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="edit">
+											<span class="fa fa-pencil"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="footer">
+								<a href="#" class="add">
+									Send Message
+								</a>
+							</li>
+						</ul>
+					</div><!-- .message -->
+					<div class="panel log">
+						<ul class="list">
+							<li>
+								<div class="log">
+									A message was sent: "A new version of the references needs to go in"
+								</div>
+								<div class="details">
+									<span class="person">
+										Nate Wright
+									</span>
+									<span class="time">
+										2:25pm October 4, 2015
+									</span>
+								</div>
+							</li>
+								<li>
+									<div class="log">
+										A file was uploaded: "Updated list of references"
+									</div>
+									<div class="details">
+										<span class="person">
+											Nate Wright
+										</span>
+										<span class="time">
+											2:21pm October 4, 2015
+										</span>
+									</div>
+								</li>
+							<li>
+								<div class="log">
+									A task was marked completed: "The Editor must add the Author and a Copyeditor to the Participants panel below."
+								</div>
+								<div class="details">
+									<span class="person">
+										Julie McGill
+									</span>
+									<span class="time">
+										9:55am October 1, 2015
+									</span>
+								</div>
+							</li>
+							<li>
+								<div class="log">
+									Nate Wright was added as a participant to this task.
+								</div>
+								<div class="details">
+									<span class="person">
+										Julie McGill
+									</span>
+									<span class="time">
+										9:53am October 1, 2015
+									</span>
+								</div>
+							</li>
+							<li>
+								<div class="log">
+									Brian Jones was added as a participant to this task.
+								</div>
+								<div class="details">
+									<span class="person">
+										Julie McGill
+									</span>
+									<span class="time">
+										9:52am October 1, 2015
+									</span>
+								</div>
+							</li>
+							<li>
+								<div class="log">
+									A task was marked completed: "The Editor must attach the files that need to be copyedited."
+								</div>
+								<div class="details">
+									<span class="person">
+										Julie McGill
+									</span>
+									<span class="time">
+										9:45am October 1, 2015
+									</span>
+								</div>
+							</li>
+							<li>
+								<div class="log">
+									A file was added: "Final draft ready for copyediting"
+								</div>
+								<div class="details">
+									<span class="person">
+										Julie McGill
+									</span>
+									<span class="time">
+										9:42am October 1, 2015
+									</span>
+								</div>
+							</li>
+							<li class="footer">
+								<a href="#" class="next">
+									Next Page
+								</a>
+							</li>
+						</ul>
+					</div><!-- .log -->
+				</div>
+			</div>
+		</div>
+	</div><!-- #copyedit-->
+
+	<div id="check-metadata" class="pkp_modal">
+		<div class="pkp_modal_panel">
+			<div class="header">
+				Check Article Metadata
+			</div>
+			<a href="#" class="close"></a>
+			<div class="content">
+				<div class="section details clearfix">
+					<div class="tasks">
+						<h3>Checklist</h3>
+						<ul>
+							<li>
+								<a href="#" class="fa fa-square-o"></a>
+								The Editor must compare the copyedited file with the submission's metadata to ensure it's correct.
+							</li>
+						</ul>
+					</div>
+					<div class="actions">
+						<ul>
+							<li>
+								<a href="#" class="button">
+									Add Participant
+								</a>
+							</li>
+							<li>
+								<a href="#" class="button">
+									Attach File
+								</a>
+							</li>
+							<li>
+								<a href="#" class="button">
+									Send Message
+								</a>
+							</li>
+						</ul>
+						<div class="due">
+							<span class="title">
+								<span class="fa fa-clock-o"></span>
+								Due
+							</span>
+							<span class="value">
+								January 8, 2015
+								<span class="fa fa-pencil"></span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="section panels">
+					<ul class="tabs">
+						<li class="participants">
+							<a href="#" data-target="participants">
+								Participants
+							</a>
+						</li>
+						<li class="files">
+							<a href="#" data-target="files">
+								Files
+							</a>
+						</li>
+						<li class="messages">
+							<a href="#" data-target="messages">
+								Messages
+							</a>
+						</li>
+						<li class="log">
+							<a href="#" data-target="log">
+								Log
+							</a>
+						</li>
+					</ul>
+					<div class="panel participants">
+						<ul class="list">
+							<li>
+								<span class="name">
+									Julie McGill
+								</span>
+								<span class="role">
+									Editor
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="delete">
+											<span class="fa fa-times-circle-o"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="footer">
+								<a href="#" class="add">
+									Add Participant
+								</a>
+							</li>
+						</ul>
+					</div><!-- .participants -->
+					<div class="panel files">
+						<ul class="list">
+							<li class="footer">
+								<a href="#" class="add">
+									Add File
+								</a>
+							</li>
+						</ul>
+					</div><!-- .files -->
+					<div class="panel messages">
+						<ul class="list">
+							<li class="footer">
+								<a href="#" class="add">
+									Send Message
+								</a>
+							</li>
+						</ul>
+					</div><!-- .message -->
+					<div class="panel log">
+						<ul class="list">
+						</ul>
+					</div><!-- .log -->
+				</div>
+			</div>
+		</div>
+	</div><!-- #check-metadata -->
+
+	<div id="prepare-pdf" class="pkp_modal">
+		<div class="pkp_modal_panel">
+			<div class="header">
+				Prepare PDF Galley
+			</div>
+			<a href="#" class="close"></a>
+			<div class="content">
+				<div class="section details clearfix">
+					<div class="tasks">
+						<h3>Checklist</h3>
+						<ul>
+							<li>
+								<a href="#" class="fa fa-square-o"></a>
+								The Editor must attach the copyedited files to be turned into a galley using the files panel below.
+							</li>
+							<li>
+								<a href="#" class="fa fa-square-o"></a>
+								The Editor must add a Layout Editor as a participant to this task using the participants panel below.
+							</li>
+							<li>
+								<a href="#" class="fa fa-square-o"></a>
+								The Layout Editor must prepare the PDF galley. This can be completed by closing this task and going to the Galleys tab.
+							</li>
+							<li>
+								<a href="#" class="fa fa-square-o"></a>
+								The Editor must approve the PDF galley and enable it for publication. This can be completed by closing this task and going to the Galleys tab.
+							</li>
+						</ul>
+					</div>
+					<div class="actions">
+						<ul>
+							<li>
+								<a href="#" class="button">
+									Add Participant
+								</a>
+							</li>
+							<li>
+								<a href="#" class="button">
+									Attach File
+								</a>
+							</li>
+							<li>
+								<a href="#" class="button">
+									Send Message
+								</a>
+							</li>
+						</ul>
+						<div class="due">
+							<span class="title">
+								<span class="fa fa-clock-o"></span>
+								Due
+							</span>
+							<span class="value">
+								February 2, 2015
+								<span class="fa fa-pencil"></span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="section panels">
+					<ul class="tabs">
+						<li class="participants">
+							<a href="#" data-target="participants">
+								Participants
+							</a>
+						</li>
+						<li class="files">
+							<a href="#" data-target="files">
+								Files
+							</a>
+						</li>
+						<li class="messages">
+							<a href="#" data-target="messages">
+								Messages
+							</a>
+						</li>
+						<li class="log">
+							<a href="#" data-target="log">
+								Log
+							</a>
+						</li>
+					</ul>
+					<div class="panel participants">
+						<ul class="list">
+							<li>
+								<span class="name">
+									Julie McGill
+								</span>
+								<span class="role">
+									Editor
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="delete">
+											<span class="fa fa-times-circle-o"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="footer">
+								<a href="#" class="add">
+									Add Participant
+								</a>
+							</li>
+						</ul>
+					</div><!-- .participants -->
+					<div class="panel files">
+						<ul class="list">
+							<li class="footer">
+								<a href="#" class="add">
+									Add File
+								</a>
+							</li>
+						</ul>
+					</div><!-- .files -->
+					<div class="panel messages">
+						<ul class="list">
+							<li class="footer">
+								<a href="#" class="add">
+									Send Message
+								</a>
+							</li>
+						</ul>
+					</div><!-- .message -->
+					<div class="panel log">
+						<ul class="list">
+						</ul>
+					</div><!-- .log -->
+				</div>
+			</div>
+		</div>
+	</div><!-- #prepare-pdf-->
 
 	<script type="text/javascript" src="assets/js/jquery.js"></script>
 	<script type="text/javascript" src="assets/js/scaffold.js"></script>
