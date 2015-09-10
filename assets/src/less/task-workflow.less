@@ -429,39 +429,38 @@
 .pkp_modal .section.details .tasks > ul > li {
     display: block;
     position: relative;
-    padding: 16px 16px 15px 48px;
+    padding: 12px 16px 11px 48px;
     border-bottom: 1px solid #fff;
-    cursor: pointer;
 
 	&:last-child {
 		border-bottom: 0;
 	}
 }
 
-.pkp_modal .section.details .tasks > ul > li:before {
+.pkp_modal .section.details .tasks .fa {
     position: absolute;
-    top: 16px;
-    left: 16px;
+    top: 0;
+    left: 0;
     display: block;
-    margin-top: 12px; /* half of 24 */
-    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    color: @text;
 
-    /* Font awesome icon */
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content: "\f096";
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+.pkp_modal .section.details .tasks .complete .fa:before {
+    content: @fa-var-check-square-o;
 }
 
 .pkp_modal .section.details .tasks > ul > li.complete {
     opacity: 0.5;
     text-decoration: line-through;
-}
-
-.pkp_modal .section.details .tasks > ul > li.complete:before {
-    content: "\f046";
 }
 
 .pkp_modal .section.details .actions {

@@ -26,10 +26,18 @@ $(document).ready(function ($) {
 	});
 
 	// Register tab listeners
-	modals.find( '.panels .tabs a' ).on('click', function(e) {
+	modals.find( '.panels .tabs a' ).click( function(e) {
 		e.preventDefault();
 		var modal = $(this).parents( '.pkp_modal' );
 		task_select_tab( modal, $(this).data('target') );
+	});
+
+	// Register checklist listeners
+	modals.find( '.tasks a' ).click( function(e) {
+		e.preventDefault();
+
+		var item = $(this).parents( 'li' );
+		item.toggleClass('complete');
 	});
 
 	// Open a task and initialize it
