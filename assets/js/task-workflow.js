@@ -15,6 +15,7 @@ $(document).ready(function ($) {
 
 	modals.click( function(e) {
 		if ( $( e.target ).is( modals ) ) {
+			e.preventDefault();
 			task_close_task();
 		}
 	})

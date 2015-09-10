@@ -539,6 +539,10 @@
 			color: @text-light;
 		}
 
+        &.log {
+            float: right;
+        }
+
 		&:hover a,
 		&:focus a {
 			border-color: @primary-light;
@@ -583,7 +587,7 @@
         border-bottom-left-radius: 3px;
         border-bottom-right-radius: 3px;
 
-		.add {
+		a {
 			padding: 0 1em;
 			line-height: 32px;
 			display: inline-block;
@@ -659,6 +663,13 @@
 
         .replies {
             margin-right: 2em;
+        }
+    }
+
+    &.log {
+
+        .person {
+            margin-right: 1em;
         }
     }
 
