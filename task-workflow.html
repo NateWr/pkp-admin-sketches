@@ -181,7 +181,7 @@
                             <ul class="tasks">
                                 <li class="submission" data-task="approve-submission">
                                     <span class="title">
-                                        Approve Submission Files
+                                        Approve Submission
                                     </span>
 									<span class="files"></span>
                                     <span class="checklist complete">
@@ -216,9 +216,9 @@
                                         0/4
                                     </span>
                                 </li>
-                                <li class="editorial" data-task="prepare-draft">
+                                <li class="editorial" data-task="copyedit">
                                     <span class="title">
-                                        Prepare Draft File for Copyeditor
+                                        Copyedit Reviewed Files
                                     </span>
 									<span class="message"></span>
                                     <span class="checklist incomplete">
@@ -270,7 +270,7 @@
 			<div class="content">
 				<div class="section details clearfix">
 					<div class="tasks">
-						<h3>Tasks</h3>
+						<h3>Checklist</h3>
 						<ul>
 							<li class="complete">
 								The Editor must add a reviewer to the Participants panel below.
@@ -286,50 +286,236 @@
 							</li>
 						</ul>
 					</div>
-					<ul class="actions">
-						<li>
-							<a href="#" class="button">
-								Add Participant
-							</a>
-						</li>
-						<li>
-							<a href="#" class="button">
-								Attach File
-							</a>
-						</li>
-						<li>
-							<a href="#" class="button">
-								Send Message
-							</a>
-						</li>
-						<li>
-							<a href="#" class="button-on">
-								Submit Recommendation
-							</a>
-						</li>
-					</ul>
+					<div class="actions">
+						<ul>
+							<li>
+								<a href="#" class="button">
+									Add Participant
+								</a>
+							</li>
+							<li>
+								<a href="#" class="button">
+									Attach File
+								</a>
+							</li>
+							<li>
+								<a href="#" class="button">
+									Send Message
+								</a>
+							</li>
+							<li>
+								<a href="#" class="button-on">
+									Submit Recommendation
+								</a>
+							</li>
+							<li>
+								<a href="#" class="button-off">
+									Mark Task Incomplete
+								</a>
+							</li>
+						</ul>
+						<div class="due">
+							<span class="title">
+								<span class="fa fa-clock-o"></span>
+								Due
+							</span>
+							<span class="value">
+								November 21, 2015
+								<span class="fa fa-pencil"></span>
+							</span>
+						</div>
+					</div>
 				</div>
 				<div class="section panels">
 					<ul class="tabs">
 						<li class="participants">
-							Participants
+							<a href="#" data-target="participants">
+								Participants
+							</a>
 						</li>
 						<li class="files">
-							Files
+							<a href="#" data-target="files">
+								Files
+							</a>
 						</li>
 						<li class="messages">
-							Messages
+							<a href="#" data-target="messages">
+								Messages
+							</a>
 						</li>
 					</ul>
-				</div>
-				<div class="panel participants">
-					Participants stuff
-				</div>
-				<div class="panel files">
-					Files stuff
-				</div>
-				<div class="panel messages">
-					Messages stuff
+					<div class="panel participants">
+						<ul class="list">
+							<li>
+								<span class="name">
+									Daniel Barnes
+								</span>
+								<span class="role">
+									Editor
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="delete">
+											<span class="fa fa-times-circle-o"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<span class="name">
+									Samantha Bee
+								</span>
+								<span class="role">
+									Reviewer
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="delete">
+											<span class="fa fa-times-circle-o"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="footer">
+								<a href="#" class="add">
+									Add Participant
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="panel files">
+						<ul class="list">
+							<li>
+								<div class="name">
+									Cognitive Overload Submission - prepared for reviewers
+								</div>
+								<div class="element">
+									Article
+								</div>
+								<span class="type">
+									<span class="fa fa-file-word-o"></span>
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="edit">
+											<span class="fa fa-pencil"></span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="delete">
+											<span class="fa fa-times-circle-o"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div class="name">
+									Journal of Public Knowledge Review Policy
+								</div>
+								<div class="element">
+									Other
+								</div>
+								<span class="type">
+									<span class="fa fa-file-pdf-o"></span>
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="edit">
+											<span class="fa fa-pencil"></span>
+										</a>
+									</li>
+									<li>
+										<a href="#" class="delete">
+											<span class="fa fa-times-circle-o"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="footer">
+								<a href="#" class="add">
+									Add File
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="panel messages">
+						<ul class="list">
+							<li>
+								<div class="name">
+									Am I supposed to have a file listing the references?
+								</div>
+								<div class="details">
+									<span class="replies">
+										2 messages
+									</span>
+									<span class="last-reply">
+										Last Message: 9:32am October 2, 2015
+									</span>
+								</div>
+								<span class="status">
+									<span class="fa fa-comment-o"></span>
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="edit">
+											<span class="fa fa-pencil"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div class="name">
+									Are you still available to do this review?
+								</div>
+								<div class="details">
+									<span class="replies">
+										2 messages
+									</span>
+									<span class="last-reply">
+										Last Message: 3:21pm September 29, 2015
+									</span>
+								</div>
+								<span class="status">
+									<span class="fa fa-comment-o"></span>
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="edit">
+											<span class="fa fa-pencil"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div class="name">
+									Invitation to review
+								</div>
+								<div class="details">
+									<span class="replies">
+										2 messages
+									</span>
+									<span class="last-reply">
+										Last Message: 11:41am August 2, 2015
+									</span>
+								</div>
+								<span class="status">
+									<span class="fa fa-comment-o"></span>
+								</span>
+								<ul class="actions">
+									<li>
+										<a href="#" class="edit">
+											<span class="fa fa-pencil"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="footer">
+								<a href="#" class="add">
+									Send Message
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>

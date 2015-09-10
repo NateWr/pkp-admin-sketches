@@ -381,8 +381,7 @@
 }
 
 .pkp_modal .section {
-    padding: 32px 0 31px;
-    border-bottom: 1px solid #ddd;
+    padding: 32px 0;
 }
 
 .pkp_modal .section:first-child {
@@ -424,6 +423,7 @@
     padding: 0;
     list-style: none;
     background: #ddd;
+	border-radius: 2px;
 }
 
 .pkp_modal .section.details .tasks > ul > li {
@@ -432,6 +432,10 @@
     padding: 16px 16px 15px 48px;
     border-bottom: 1px solid #fff;
     cursor: pointer;
+
+	&:last-child {
+		border-bottom: 0;
+	}
 }
 
 .pkp_modal .section.details .tasks > ul > li:before {
@@ -464,27 +468,199 @@
     float: right;
     box-sizing: border-box;
     width: 256px;
-    margin: 0;
     margin-top: 48px;
     padding-left: 16px;
-    list-style: none;
-}
 
-.pkp_modal .section.details .actions > li {
-    margin-bottom: 16px;
-}
+	> ul {
+	    margin: 0;
+	    padding: 0;
+	    list-style: none;
 
-.pkp_modal .section.details .actions > li:last-child {
-    margin-bottom: 0;
-}
+		>  li {
+		    margin-bottom: 16px;
 
-.pkp_modal .section.details .actions .button,
-.pkp_modal .section.details .actions .button-on,
-.pkp_modal .section.details .actions .button-off {
-    display: block;
-    text-align: center;
+			&:last-child {
+			    margin-bottom: 0;
+			}
+		}
+	}
+
+	.button,
+	.button-on,
+	.button-off {
+	    display: block;
+	    text-align: center;
+	}
+
+	.due {
+		margin-top: @double;
+		font-size: @font-sml;
+
+		.title {
+			font-weight: 700;
+			margin-right: 1em;
+		}
+
+		.value .fa {
+			margin-left: 0.5em;
+			color: @primary-light;
+			cursor: pointer;
+		}
+	}
 }
 
 .pkp_modal .section.panels .tabs {
     margin-top: 0;
+	border-bottom: 0;
+	font-size: @font-sml;
+
+	> li {
+
+		a {
+			top: 0;
+			padding: 0;
+			margin-left: 16px;
+			margin-right: 16px;
+			border: none;
+			border-bottom: 4px solid transparent;
+			line-height: 44px;
+			font-weight: @bold;
+		}
+
+		&:first-child a {
+			margin-left: 0;
+		}
+
+		&:last-child a {
+			margin-right: 0;
+		}
+
+		&.current a {
+			border-color: #ddd;
+			color: @text-light;
+		}
+
+		&:hover a,
+		&:focus a {
+			border-color: @primary-light;
+		}
+	}
+}
+
+.pkp_modal .section.panels .panel {
+    display: none;
+
+    &.current {
+        display: block;
+    }
+
+	> ul,
+	.actions {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	> ul {
+		border: 1px solid #ddd;
+		border-bottom: none;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+
+		 > li {
+			position: relative;
+			padding: 8px 16px 7px;
+			line-height: 24px;
+			border-bottom: 1px solid #ddd;
+		}
+	}
+
+	.footer {
+		padding: 0;
+		font-size: @font-sml;
+		text-align: right;
+		background: #ddd;
+		border: none;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+
+		.add {
+			padding: 0 1em;
+			line-height: 32px;
+			display: inline-block;
+			font-weight: @bold;
+		}
+	}
+
+	.actions {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+        display: block;
+
+		> li {
+			display: inline-block;
+			width: 24px;
+			text-align: center;
+		}
+
+		.delete {
+			color: @offset;
+
+            &:hover .fa:before,
+            &:focus .fa:before {
+                content: @fa-var-times-circle;
+            }
+		}
+	}
+
+    .name {
+        padding-right: 64px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .name,
+    .role,
+    .element,
+    .details {
+        display: block;
+    }
+
+	.role,
+    .element,
+    .details {
+		font-size: @font-sml;
+		color: @text-light;
+	}
+
+    .type,
+    .status {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        line-height: 24px;
+        color: @text-light;
+    }
+
+    &.files {
+
+        .name,
+        .element {
+            padding-left: 32px;
+        }
+    }
+
+    &.messages {
+
+        .name,
+        .details {
+            padding-left: 32px;
+        }
+
+        .replies {
+            margin-right: 2em;
+        }
+    }
+
 }
