@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+	<link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" id="base-css"  href="assets/css/base.css" type="text/css" media="all" />
+
+	<title>Task-based Workflow &mdash; Task Configuration Panel &mdash; PKP Admin Sketches</title>
+
+</head>
+
+<body class="task-workflow task-workflow-config">
+
+	<div id="wrapper">
+
+		<div id="nav">
+			<a href="#" class="logo">
+				<img src="assets/img/ojs_logo.png">
+			</a>
+			<ul class="menu">
+				<li class="tasks">
+					<a href="#">
+						Tasks
+						<span class="task-count">2</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">Dashboard</a>
+				</li>
+				<li>
+					<a href="#">Settings</a>
+					<ul class="submenu">
+						<li>
+							<a href="#">Journal</a>
+						</li>
+						<li>
+							<a href="#">Website</a>
+						</li>
+						<li>
+							<a href="#">Workflow</a>
+						</li>
+						<li>
+							<a href="#">Distribution</a>
+						</li>
+						<li>
+							<a href="#">Users & Roles</a>
+						</li>
+						<li>
+							<a href="#">Administration</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Tools</a>
+					<ul class="submenu">
+						<li>
+							<a href="#">Import/Export</a>
+						</li>
+						<li>
+							<a href="#">Statistics</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="controls">
+				<li>
+					<a href="#">
+						<span class="fa fa-eye"></span>
+						View Site
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="fa fa-sign-out"></span>
+						Logout
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div id="content">
+
+			<div class="settings">
+
+				<div class="head">
+					<span class="title">
+						Workflow Settings
+					</span>
+					<span class="journal">
+						Journal of Public Knowledge
+					</span>
+				</div>
+
+				<div class="stages">
+
+					<ul class="tabs">
+						<li class="current">
+							<a href="#">Tasks</a>
+						</li>
+						<li>
+							<a href="#">Yada</a>
+						</li>
+						<li>
+							<a href="#">Yada</a>
+						</li>
+					</ul>
+
+					<div class="tab-panel current">
+
+						<div class="tab-sidebar">
+
+							<ul class="controls">
+								<li>
+									<a href="#" class="button">
+										Add Default Task
+									</a>
+								</li>
+								<li>
+									<a href="#" class="button">
+										Add Stage
+									</a>
+								</li>
+							</ul>
+
+						</div><!-- .tab-sidebar -->
+
+						<div class="task-list">
+                            <div class="head">
+                                <div class="title">
+                                    Default Tasks
+                                    <a href="#" class="fa fa-info-circle toggle-panel" data-target="panel-main"></a>
+                                </div>
+                            </div>
+
+                            <ul class="tasks">
+
+								<li class="submission" data-task="approve-submission">
+									<span class="title">
+										Approve Submission Files
+									</span>
+									<ul class="actions">
+										<li>
+											<a href="#" class="edit">
+												<span class="fa fa-pencil"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="delete">
+												<span class="fa fa-times-circle-o"></span>
+											</a>
+										</li>
+									</ul>
+								</li>
+                                <li class="review" data-task="peer-review-1">
+                                    <span class="title">
+                                        Conduct Peer Review
+                                    </span>
+									<ul class="actions">
+										<li>
+											<a href="#" class="edit">
+												<span class="fa fa-pencil"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="delete">
+												<span class="fa fa-times-circle-o"></span>
+											</a>
+										</li>
+									</ul>
+                                </li>
+                                <li class="review" data-task="peer-review-2">
+                                    <span class="title">
+                                        Conduct Peer Review
+                                    </span>
+									<ul class="actions">
+										<li>
+											<a href="#" class="edit">
+												<span class="fa fa-pencil"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="delete">
+												<span class="fa fa-times-circle-o"></span>
+											</a>
+										</li>
+									</ul>
+                                </li>
+                                <li class="review" data-task="peer-review-3">
+                                    <span class="title">
+                                        Conduct Peer Review
+                                    </span>
+									<ul class="actions">
+										<li>
+											<a href="#" class="edit">
+												<span class="fa fa-pencil"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="delete">
+												<span class="fa fa-times-circle-o"></span>
+											</a>
+										</li>
+									</ul>
+                                </li>
+                                <li class="editorial-decision" data-task="editorial-decision">
+                                    <span class="title">
+                                        Make Editorial Decision
+                                    </span>
+									<ul class="actions">
+										<li>
+											<a href="#" class="edit">
+												<span class="fa fa-pencil"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="delete">
+												<span class="fa fa-times-circle-o"></span>
+											</a>
+										</li>
+									</ul>
+                                </li>
+                                <li class="editorial" data-task="copyedit">
+                                    <span class="title">
+                                        Copyedit Reviewed Files
+                                    </span>
+									<ul class="actions">
+										<li>
+											<a href="#" class="edit">
+												<span class="fa fa-pencil"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="delete">
+												<span class="fa fa-times-circle-o"></span>
+											</a>
+										</li>
+									</ul>
+                                </li>
+                                <li class="editorial" data-task="check-metadata">
+                                    <span class="title">
+                                        Check Article Metadata
+                                    </span>
+									<ul class="actions">
+										<li>
+											<a href="#" class="edit">
+												<span class="fa fa-pencil"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="delete">
+												<span class="fa fa-times-circle-o"></span>
+											</a>
+										</li>
+									</ul>
+                                </li>
+                                <li class="production" data-task="prepare-pdf">
+                                    <span class="title">
+                                        Prepare PDF Galley
+                                    </span>
+									<ul class="actions">
+										<li>
+											<a href="#" class="edit">
+												<span class="fa fa-pencil"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="delete">
+												<span class="fa fa-times-circle-o"></span>
+											</a>
+										</li>
+									</ul>
+                                </li>
+                                <li class="production" data-task="schedule-publication">
+                                    <span class="title">
+                                        Schedule for Publication
+                                    </span>
+									<ul class="actions">
+										<li>
+											<a href="#" class="edit">
+												<span class="fa fa-pencil"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="delete">
+												<span class="fa fa-times-circle-o"></span>
+											</a>
+										</li>
+									</ul>
+                                </li>
+                            </ul>
+                        </div><!-- .task-list -->
+
+						<div class="stage-list task-list">
+                            <div class="head">
+                                <div class="title">
+                                    Stages
+                                    <a href="#" class="fa fa-info-circle toggle-panel" data-target="panel-main"></a>
+                                </div>
+                            </div>
+							<ul class="stages tasks">
+								<li>
+									<span class="title">
+										Submission
+									</span>
+									<ul class="actions">
+										<li>
+											<a href="#" class="edit">
+												<span class="fa fa-pencil"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="delete">
+												<span class="fa fa-times-circle-o"></span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span class="title">
+										Review
+									</span>
+									<ul class="actions">
+										<li>
+											<a href="#" class="edit">
+												<span class="fa fa-pencil"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="delete">
+												<span class="fa fa-times-circle-o"></span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span class="title">
+										Editorial
+									</span>
+									<ul class="actions">
+										<li>
+											<a href="#" class="edit">
+												<span class="fa fa-pencil"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="delete">
+												<span class="fa fa-times-circle-o"></span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span class="title">
+										Production
+									</span>
+									<ul class="actions">
+										<li>
+											<a href="#" class="edit">
+												<span class="fa fa-pencil"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="delete">
+												<span class="fa fa-times-circle-o"></span>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+
+					</div><!-- .tab-panel -->
+
+				</div>
+			</div><!-- .submission -->
+		</div><!-- #content -->
+	</div>
+
+	<div id="approve-submission" class="pkp_modal">
+		<div class="pkp_modal_panel">
+			<div class="header">
+				Edit Task
+			</div>
+			<a href="#" class="close"></a>
+			<form class="content">
+				<fieldset>
+					<div class="field-name">
+						<label>
+							<span class="label">
+								Name
+							</span>
+							<input type="text">
+						</label>
+					</div>
+					<div class="field-control-type">
+						<label>
+							<span class="label">
+								Type
+							</span>
+							<select>
+								<option>Basic Task</option>
+								<option>Initial Approval</option>
+								<option>Peer Review</option>
+								<option>Editorial Decision</option>
+							</select>
+						</label>
+					</div>
+					<div class="field-stage">
+						<label>
+							<span class="label">
+								Editorial Stage
+							</span>
+							<select>
+								<option>Submission</option>
+								<option>Review</option>
+								<option>Editorial</option>
+								<option>Production</option>
+							</select>
+						</label>
+					</div>
+					<div class="field-checklist">
+						<label>
+							<span class="label">
+								Checklist
+							</span>
+							<span class="description">
+								List any steps required to complete this task, so that participants understand they're responsibilities.
+							</span>
+							<ul class="checklist">
+								<li>
+									<span class="fa fa-square-o"></span>
+									The Editor must add a reviewer to the Participant's panel
+									<ul class="actions">
+										<li>
+											<a href="#" class="edit">
+												<span class="fa fa-pencil"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="delete">
+												<span class="fa fa-times-circle-o"></span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span class="fa fa-square-o"></span>
+									The Reviewer should accept or decline the request to review by sending a message from the Messages panel below.
+									<ul class="actions">
+										<li>
+											<a href="#" class="edit">
+												<span class="fa fa-pencil"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="delete">
+												<span class="fa fa-times-circle-o"></span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span class="fa fa-square-o"></span>
+									The Reviewer should upload a file with their completed review.
+									<ul class="actions">
+										<li>
+											<a href="#" class="edit">
+												<span class="fa fa-pencil"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="delete">
+												<span class="fa fa-times-circle-o"></span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span class="fa fa-square-o"></span>
+									The Reviewer should submit their recommendation using the Submit Recommendation button.
+									<ul class="actions">
+										<li>
+											<a href="#" class="edit">
+												<span class="fa fa-pencil"></span>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="delete">
+												<span class="fa fa-times-circle-o"></span>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul><!-- .checklist -->
+							<a href="#">Add New</a>
+						</label>
+					</div>
+
+					<div class="field-auto-participants">
+						<label>
+							<span class="label">
+								Automatic Participants
+							</span>
+							<span class="description">
+								Select any participants who should be automatically assigned to this task when it is created.
+							</span>
+							<ul class="participants">
+								<li>
+									<input type="checkbox"> Assigned Editor
+								</li>
+								<li>
+									<input type="checkbox"> Submission Author
+								</li>
+							</ul>
+						</label>
+					</div>
+
+					<div class="field-restrict-participants">
+						<label>
+							<span class="label">
+								Access Restrictions
+							</span>
+							<span class="description">
+								You can prevent anyone, even an assigned editor, from adding certain kinds of users to this task. This is useful for preventing your editorial team from accidentally adding the wrong participants to a private task.
+							</span>
+							<ul class="restrict-participants">
+								<li>
+									<input type="radio" name="restrict-participants" class="all"> Allow any user to be assigned to this task
+								</li>
+								<li>
+									<input type="radio" name="restrict-participants" class="restrict"> Allow only the following users to be assigned to this task
+									<ul class="roles">
+										<li><input type="checkbox"> Submission Author</li>
+										<li><input type="checkbox"> Journal Manager</li>
+										<li><input type="checkbox"> Journal Editor</li>
+										<li><input type="checkbox"> Section Editor</li>
+										<li><input type="checkbox"> Guest Editor</li>
+										<li><input type="checkbox"> Reviewer</li>
+										<li><input type="checkbox"> Layout Manager</li>
+										<li><input type="checkbox"> Copyeditor</li>
+									</ul>
+								</li>
+							</ul>
+						</label>
+					</div>
+
+					<div class="field-sections">
+						<label>
+							<span class="label">
+								Section Restrictions
+							</span>
+							<span class="description">
+								You can enable this task for all submissions or limit it to submissions for specific sections.
+							</span>
+								<ul class="restrict-sections">
+									<li>
+										<input type="radio" name="sections" class="all"> Add task to all submissions
+									</li>
+									<li>
+										<input type="radio" name="sections" class="restrict"> Add task to submissions in the following sections
+										<ul class="roles">
+											<li><input type="checkbox"> Reviews</li>
+											<li><input type="checkbox"> Articles</li>
+										</ul>
+									</li>
+								</ul>
+						</label>
+					</div>
+
+					<div class="buttons">
+						<a href="#" class="button">
+							Save Task
+						</a>
+						<a href="#" class="cancel">
+							Cancel
+						</a>
+					</div>
+
+				</fieldset>
+			</form>
+		</div>
+	</div><!-- #approve-submission -->
+
+	<script type="text/javascript" src="assets/js/jquery.js"></script>
+	<script type="text/javascript" src="assets/js/scaffold.js"></script>
+	<script type="text/javascript" src="assets/js/side-panel.js"></script>
+	<script type="text/javascript" src="assets/js/task-workflow.js"></script>
+
+</body>
+</html>

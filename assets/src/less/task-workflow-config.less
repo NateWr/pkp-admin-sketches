@@ -1,0 +1,203 @@
+// Mockup for task-based workflow, which demonstrates an admin area where tasks
+// could be set up and configured
+
+.task-workflow-config {
+
+    #content > .settings > .head {
+        margin-bottom: 32px;
+    }
+
+    #content > .settings > .head .title {
+        font-size: 24px;
+        font-weight: 700;
+        color: @text-light;
+        display: block;
+    }
+
+    #content > .settings > .head .journal {
+        font-size: 14px;
+        color: @text-light;
+    }
+
+    .tab-sidebar {
+
+        .controls {
+            margin-top: @double * 2;
+        }
+    }
+
+    .task-list .head .title {
+        line-height: @double;
+    }
+
+    .task-list {
+
+        > li {
+            padding-right: 96px;
+        }
+
+        > .tasks > li > .title {
+            margin-left: 0;
+            font-weight: 400;
+        }
+
+        .actions {
+            position: absolute;
+            top: 20px;
+            right: 16px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            > li {
+                display: inline-block;
+                width: 24px;
+                text-align: center;
+            }
+
+            .delete {
+                color: @off;
+
+                &:hover .fa:before,
+                &:focus .fa:before {
+                    content: @fa-var-times-circle;
+                }
+            }
+        }
+    }
+
+    .pkp_modal {
+
+        fieldset {
+            margin: 0;
+            padding: 0;
+            border: none;
+
+            > div {
+                margin-bottom: 32px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .label {
+                    display: block;
+                    font-weight: 700;
+                }
+            }
+
+            .field-checklist,
+            .field-auto-participants,
+            .field-restrict-participants,
+            .field-sections {
+                margin-bottom: 48px;
+            }
+
+            input[type="text"],
+            select {
+                display: block;
+                line-height: 24px;
+                padding: 4px 0;
+                width: 100%;
+                max-width: 20em;
+                border: 1p solid #ddd;
+            }
+
+            select {
+                height: 32px;
+            }
+
+            .description {
+                color: @text-light;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            .checklist {
+                margin-top: 16px;
+                background: @bg;
+
+                > li {
+                    position: relative;
+                    padding: 12px 64px 11px 48px;
+                    border-bottom: 1px solid #fff;
+
+                    > .fa {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 48px;
+                        line-height: 48px;
+                        width: 48px;
+                        text-align: center;
+                        color: @text-light;
+                    }
+                }
+
+                .actions {
+                    position: absolute;
+                    top: 12px;
+                    right: 16px;
+
+                    > li {
+                        display: inline-block;
+                        width: 24px;
+                        text-align: center;
+                    }
+
+                    .delete {
+                        color: @off;
+
+                        &:hover .fa:before,
+                        &:focus .fa:before {
+                            content: @fa-var-times-circle;
+                        }
+                    }
+                }
+            }
+
+            .field-checklist > label > a {
+                display: block;
+                text-align: right;
+                background: @bg;
+                font-weight: 700;
+                padding-right: 16px;
+                line-height: 48px;
+            }
+
+            ul.participants,
+            ul.restrict-participants,
+            ul.restrict-sections {
+                margin-top: 16px;
+                margin-left: 32px;
+
+                ul {
+                    margin-top: 8px;
+                    margin-left: 32px;
+                }
+
+                li {
+                    padding: 4px 0;
+                }
+
+                input[type="checkbox"],
+                input[type="radio"] {
+                    margin-right: 0.5em;
+                }
+            }
+
+            .buttons {
+                .clearfix;
+                line-height: 34px;
+
+                .button {
+                    float: right;
+                }
+            }
+        }
+    }
+}
