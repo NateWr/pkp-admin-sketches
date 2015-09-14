@@ -34,6 +34,27 @@
 .tab-sidebar .tasks > li {
     padding: 8px 0;
     line-height: 32px;
+
+    .number {
+        color: @text-light;
+    }
+
+    &.submission .number {
+        border-color: @submission;
+    }
+
+    &.review .number {
+        border-color: @review;
+    }
+
+    &.editorial .number {
+        border-color: @editorial;
+    }
+
+    &.production .number {
+        border-color: @production;
+    }
+
 }
 
 .tab-sidebar .tasks .number {
